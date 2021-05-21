@@ -28,32 +28,44 @@
 
 <a href="#main" class="sr-only sr-only-focusable"><?php _e( 'Skip to main content', 'wp_lula_cortes' ); ?></a>
 
+<div class="overlay" id="overlay">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-right">
+				<div class="button_container toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+			</div>
+		</div>
+	</div>
+	
+	<nav class="overlay-menu">
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'main-menu',
+					'container'      => '',
+					'menu_class'     => 'navbar-nav mr-auto',
+					'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+					'walker'         => new WP_Bootstrap_Navwalker(),
+				)
+			);
+		?>
+	</nav>
+
+	
+</div>
+
 <div id="wrapper">
-    <header class="menu-main menu-main--dark">
+    <header class="menu-main menu-main--fixed">
         <div class="container">
             <div class="row">
                 <div class="col-9">
                     <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img class="navbar-brand__image" src="<?php echo get_stylesheet_directory_uri( ) . '/assets/img/logo/logo.svg'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+						<img class="navbar-brand__image" src="<?php echo get_stylesheet_directory_uri( ) . '/assets/img/logo-icon.svg'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+						<img class="navbar-brand__image" src="<?php echo get_stylesheet_directory_uri( ) . '/assets/img/logo-title.svg'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
                     </a>
                 </div>
                 <div class="col-3">
-                    <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
-                    <div class="overlay" id="overlay">
-                        <nav class="overlay-menu">
-                            <?php
-                                wp_nav_menu(
-                                    array(
-                                        'theme_location' => 'main-menu',
-                                        'container'      => '',
-                                        'menu_class'     => 'navbar-nav mr-auto',
-                                        'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
-                                        'walker'         => new WP_Bootstrap_Navwalker(),
-                                    )
-                                );
-                            ?>
-                        </nav>
-                    </div>
+                    <div class="button_container toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
                 </div>
             </div>
         </div>

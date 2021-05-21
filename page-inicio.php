@@ -1,15 +1,25 @@
 <?php get_header(); ?>
 
+<?php 
+    $args = array( 'post_type' => 'banners', 'posts_per_page' => 10 );
+    $bannerQuery = new WP_Query( $args ); 
+?>
+
+<section class="module parallax parallax-1">
+  <div class="container text-center">
+    <!-- <h1>Armand Lubbe</h1> -->
+  </div>
+</section>
+
 <div class="banner-main container-full">
-    <!-- <div class="banner-main__item">
-        <img src="<?php echo get_stylesheet_directory_uri(  ) . '/assets/img/lula.png' ?>" alt="" class="img-responsive banner-main__image">
-    </div> -->
-    <!-- <div class="banner-main__item">
-        <img src="<?php echo get_stylesheet_directory_uri(  ) . '/assets/img/banner_lula.png' ?>" alt="" class="img-responsive banner-main__image">
-    </div>
+    <?php while ( $bannerQuery->have_posts() ) : $bannerQuery->the_post(); ?>
     <div class="banner-main__item">
-        <img src="<?php echo get_stylesheet_directory_uri(  ) . '/assets/img/banner_lula.png' ?>" alt="" class="img-responsive banner-main__image">
-    </div> -->
+        <?//= the_post_thumbnail( ); ?>
+    </div>
+    <?php 
+        endwhile;
+        wp_reset_postdata(); 
+?>
 </div>
 
 <section class="slide-posts p-5 mt-5 mb-5">
