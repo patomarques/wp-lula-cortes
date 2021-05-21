@@ -48,6 +48,11 @@ body {
   background-color: #ffffff;
 }
 
+.menu-main--fixed {
+  position: fixed;
+  width: 100%;
+}
+
 .button_container {
   position: relative;
   top: 10px;
@@ -68,11 +73,6 @@ body {
 .button_container.active .top {
   -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
           transform: translateY(11px) translateX(0) rotate(45deg);
-  background: #ffffff;
-}
-
-.button_container.active .middle {
-  opacity: 0;
   background: #ffffff;
 }
 
@@ -117,6 +117,10 @@ body {
   overflow: hidden;
 }
 
+.overlay .button_container {
+  top: 40px;
+}
+
 .overlay.open {
   opacity: 1;
   visibility: visible;
@@ -124,24 +128,24 @@ body {
   z-index: 99;
 }
 
-.overlay.open li {
+.overlay li {
   -webkit-animation: fadeInRight 0.5s ease forwards;
           animation: fadeInRight 0.5s ease forwards;
   -webkit-animation-delay: 0.35s;
           animation-delay: 0.35s;
 }
 
-.overlay.open li:nth-of-type(2) {
+.overlay li:nth-of-type(2) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.overlay.open li:nth-of-type(3) {
+.overlay li:nth-of-type(3) {
   -webkit-animation-delay: 0.45s;
           animation-delay: 0.45s;
 }
 
-.overlay.open li:nth-of-type(4) {
+.overlay li:nth-of-type(4) {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
@@ -184,9 +188,7 @@ body {
   overflow: hidden;
 }
 
-.overlay ul li a:hover:after,
-.overlay ul li a:focus:after,
-.overlay ul li a:active:after {
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
   width: 100%;
 }
 
@@ -275,7 +277,6 @@ footer {
 
 .banner-main {
   background-color: #e5e5e5;
-  height: 60vh;
   position: relative;
 }
 
@@ -286,5 +287,88 @@ footer {
   margin: 0 auto;
   display: block;
   width: auto;
+}
+
+section.module.content {
+  padding: 40px 0;
+}
+
+section.module.parallax {
+  height: 60vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section.module.parallax-1 {
+  background-image: url("https://images.unsplash.com/photo-1458640904116-093b74971de9");
+}
+
+section.module.parallax-2 {
+  background-image: url("https://images.unsplash.com/photo-1451906278231-17b8ff0a8880?crop=entropy&fit=crop&fm=jpg&h=900&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1700");
+}
+
+section.module.parallax-3 {
+  background-image: url("https://images.unsplash.com/photo-1437652010333-fbf2cd02a4f8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=9de65fa9bbcbd2401f3cb9cc3c8cf582");
+}
+
+section.module.parallax-4 {
+  background-image: url("https://images.unsplash.com/photo-1437652010333-fbf2cd02a4f8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=9de65fa9bbcbd2401f3cb9cc3c8cf582");
+}
+
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax h1 {
+    font-size: 96px;
+  }
+}
+
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
+}
+
+.slide {
+  opacity: 0;
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
+  -webkit-transform: translate3d(-100px, 0px, 0px);
+  transform: translate3d(-100px, 0px, 0px);
+}
+
+.hasSlid {
+  opacity: 1;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.padding-enlarge {
+  -webkit-transition: padding-top  .15s ease-in-out, padding-bottom .15s ease-in-out;
+  transition: padding-top  .15s ease-in-out, padding-bottom .15s ease-in-out;
+}
+
+.padding-enlarge:hover {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.footer {
+  background-color: #1D1E22;
+  color: #fff;
 }
 /*# sourceMappingURL=lulacortes.css.map */
