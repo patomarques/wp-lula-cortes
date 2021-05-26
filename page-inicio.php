@@ -5,13 +5,30 @@
     $bannerQuery = new WP_Query( $args ); 
 ?>
 
-<section class="module parallax parallax-1">
-  <div class="container text-center">
-    <!-- <h1>Armand Lubbe</h1> -->
-  </div>
+<section id="slider-banners" class="container-full">
+    <div class="module parallax parallax-1">
+        <div class="container text-center">
+            <!-- <h1>Armand Lubbe</h1> -->
+        </div>
+    </div>
+    <div class="module parallax parallax-2">
+    <div class="container text-center">
+            <!-- <h1>Armand Lubbe</h1> -->
+        </div>
+    </div>
+    <div class="module parallax parallax-3">
+    <div class="container text-center">
+            <!-- <h1>Armand Lubbe</h1> -->
+        </div>
+    </div>
+    <div class="module parallax parallax-4">
+        <div class="container text-center">
+            <!-- <h1>Armand Lubbe</h1> -->
+        </div>
+    </div>
 </section>
 
-<div class="banner-main container-full">
+<div class="banner-main container-full hidden">
     <?php while ( $bannerQuery->have_posts() ) : $bannerQuery->the_post(); ?>
     <div class="banner-main__item">
         <?//= the_post_thumbnail( ); ?>
@@ -22,7 +39,7 @@
 ?>
 </div>
 
-<section class="slide-posts p-5 mt-5 mb-5">
+<section id="section-bio" class="section-bio p-5 mt-5 mb-5">
     <div class="container">
         <div class="row">
             <div class="col-12 offset-md-2 col-md-8 text-center">
@@ -45,7 +62,7 @@
             <div class="content-text__box pl-4">
                 <h3 class="title-section bold">Atípicos</h3>
 
-                <h4 class="content-text__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h4>
+                <h4 class="subtitle">Lorem ipsum, dolor sit amet. </h4>
 
                 <p class="content-text_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut magni reiciendis obcaecati ducimus fuga cumque. Id nostrum quod reprehenderit. Sapiente fugit dicta dolor beatae id exercitationem, sed nostrum qui?</p>
 
@@ -60,7 +77,7 @@
         <div class="col-12 col-md-6 content-text text-right">
             <div class="content-text__box pl-4">
                 <h3 class="title-section bold">Música</h3>
-                <h4 class="content-text__subtitle">Discografia | Singles | Trilhas</h4>
+                <h4 class="subtitle">Discografia | Singles | Trilhas</h4>
 
                 <p class="content-text__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut magni reiciendis obcaecati ducimus fuga cumque. Id nostrum quod reprehenderit. Sapiente fugit dicta dolor beatae id exercitationem, sed nostrum qui?</p>
 
@@ -82,7 +99,7 @@
             <div class="content-text__box pl-4">
                 <h3 class="title-section bold">Atípicos</h3>
 
-                <h4 class="content-text__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h4>
+                <h4 class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h4>
 
                 <p class="content-text_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut magni reiciendis obcaecati ducimus fuga cumque. Id nostrum quod reprehenderit. Sapiente fugit dicta dolor beatae id exercitationem, sed nostrum qui?</p>
 
@@ -98,7 +115,7 @@
             <div class="content-text__box pl-4">
                 <h3 class="title-section bold">Vídeos</h3>
 
-                <h4 class="content-text__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h4>
+                <h4 class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h4>
 
                 <p class="content-text_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut magni reiciendis obcaecati ducimus fuga cumque. Id nostrum quod reprehenderit. Sapiente fugit dicta dolor beatae id exercitationem, sed nostrum qui?</p>
 
@@ -120,7 +137,7 @@
             <div class="content-text__box pl-4">
                 <h3 class="title-section bold">Discos</h3>
 
-                <h4 class="content-text__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h4>
+                <h4 class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h4>
 
                 <p class="content-text_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut magni reiciendis obcaecati ducimus fuga cumque. Id nostrum quod reprehenderit. Sapiente fugit dicta dolor beatae id exercitationem, sed nostrum qui?</p>
 

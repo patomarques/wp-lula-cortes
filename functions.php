@@ -23,7 +23,23 @@ function create_custom_post_type() {
             //'show_in_rest' => true,
             'supports' => array( 'title', 'author', 'thumbnail', 'custom-fields'), //'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'
             //'menu_position'       => 1,
-            //'exclude_from_search' => true 
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'home-contents',
+        array(
+            'labels' => array(
+                'name' => __( 'Home Infos' ),
+                'singular_name' => __( 'Home Info' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            //'rewrite' => array('slug' => 'banners'),
+            //'show_in_rest' => true,
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'), //'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'
+            //'menu_position'       => 1,
+            'exclude_from_search' => true 
         )
     );
 }

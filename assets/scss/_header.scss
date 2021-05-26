@@ -1,5 +1,6 @@
 .menu-main{
   padding: 30px 0;
+  z-index: 99;
 
   &--dark{
     background-color: $color-black;
@@ -38,6 +39,10 @@
       background: $color-white;
     }
 
+    .middle{
+      display: none;
+    }
+
     .bottom {
       transform: translateY(-11px) translateX(0) rotate(-45deg);
       background: $color-white;
@@ -45,7 +50,7 @@
   }
 
   span {
-    background: $color-black;
+    background: $color-white;
     border: none;
     height: 1px;
     width: 100%;
@@ -171,20 +176,30 @@
   }
 }
 
-.nav-link{
-  &:hover{
-    
+.navbar-brand{
+  position: relative;
+  z-index: 9; 
+
+  &__image{
+    // path { 
+    //   fill: orange; 
+    //   background-color: #fff; 
+    // }
   }
 }
 
-.navbar-brand{
-  position: relative;
-  z-index: 9;
+@media(min-width: 320px) {
+  .navbar-brand{
+    img{
+      height: 1.5rem !important; 
+    }
+  }
+}
 
-  &__image{
-    path { 
-      fill: orange; 
-      background-color: #fff;
+@media(min-width: 678px) {
+  .navbar-brand{
+    img{
+      height: 1.8rem !important;
     }
   }
 }
