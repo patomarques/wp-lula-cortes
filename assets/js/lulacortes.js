@@ -34,18 +34,23 @@
             let sectionElement = document.getElementById('section-bio');
             let menuElement = $('.menu-main');
 
-            console.log('menu effect ', sectionElement.scrollTop);
+            //console.log('menu effect ', sectionElement.scrollTop);
         }
 
         $window.on('scroll resize', isOnView);
 
         $window.on('scroll resize', fixMenu);
 
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 50) {
-              $('nav').addClass('shrink');
+        let elementHeight = document.getElementById('slider-banners').offsetHeight;
+
+        $(window).scroll(function() {            
+            
+            console.log('size ', elementHeight);
+            
+            if ($(document).scrollTop() > elementHeight) {
+                $('.menu-main').addClass('shrink menu-main--dark');
             } else {
-              $('nav').removeClass('shrink');
+                $('.menu-main').removeClass('shrink menu-main--dark');
             }
         });
     });
