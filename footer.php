@@ -28,7 +28,7 @@
 
             <div class="bootscore-info text-muted text-center mt-5">
                 <div class="container">
-                    <small><?php bloginfo('name'); ?> &copy;&nbsp;<?php echo Date('Y'); ?></small>    
+                    <small><a href="/"><?php bloginfo('name'); ?></a> &copy;&nbsp;<?php echo Date('Y'); ?></small>    
                 </div>
             </div>
         </div>
