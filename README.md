@@ -1,4 +1,6 @@
-# Lula Cortes website built with Wordpress (wp-lula-cortes-child)
+# Lula Cortes website  
+
+#### Proudly developed with wordpress
 
 ## wp-lula-cortes-child is a wordpress theme based on **them.es Starter**
 
