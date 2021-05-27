@@ -5,38 +5,15 @@
     $bannerQuery = new WP_Query( $args ); 
 ?>
 
-<section id="slider-banners" class="container-full">
-    <div class="module parallax parallax-1">
-        <div class="container text-center">
-            <!-- <h1>Armand Lubbe</h1> -->
-        </div>
-    </div>
-    <div class="module parallax parallax-2">
-    <div class="container text-center">
-            <!-- <h1>Armand Lubbe</h1> -->
-        </div>
-    </div>
-    <div class="module parallax parallax-3">
-    <div class="container text-center">
-            <!-- <h1>Armand Lubbe</h1> -->
-        </div>
-    </div>
-    <div class="module parallax parallax-4">
-        <div class="container text-center">
-            <!-- <h1>Armand Lubbe</h1> -->
-        </div>
-    </div>
-</section>
-
-<div class="banner-main container-full hidden">
+<div id="slider-banners" class="container-full banner-main">
     <?php while ( $bannerQuery->have_posts() ) : $bannerQuery->the_post(); ?>
-    <div class="banner-main__item">
-        <?//= the_post_thumbnail( ); ?>
+    <div class="banner-main__item module parallax" style="background-image: url(<?= the_post_thumbnail_url( ); ?>);">
+        
     </div>
     <?php 
         endwhile;
         wp_reset_postdata(); 
-?>
+    ?>
 </div>
 
 <section id="section-bio" class="section-bio p-5 mt-5 mb-5">
