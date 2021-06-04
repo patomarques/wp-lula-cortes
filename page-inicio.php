@@ -1,8 +1,15 @@
 <?php get_header(); ?>
 
 <?php 
+    //get all banners
     $args = array( 'post_type' => 'banners', 'posts_per_page' => 10 );
     $bannerQuery = new WP_Query( $args ); 
+
+    //get all posts
+    $args = array( 'post_type' => 'home-contents', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => 20 );
+    $queryInfos = new WP_Query( $args ); 
+
+
 ?>
 
 <div id="slider-banners" class="container-full banner-main">
@@ -16,112 +23,62 @@
     ?>
 </div>
 
-<section id="section-bio" class="section-bio p-5 mt-5 mb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 offset-md-2 col-md-8 text-center">
-                <h3 class="title-section bold">Bio</h3>
-                <h4 class="subtitle">Quem somos</h4>
+<div class="content-sections">
+    <?php while ( $queryInfos->have_posts() ) : $queryInfos->the_post(); ?>
 
-                <div class="description">Desde 2015, a rede Lula Cortex dinfunde a vida e obra de Lula Côrtes, importante multi-artista pernambucano, através de ações marcadas por fluxos, misturas, conexões e alianças.</div>
+        <?php
 
+        //if centered show image e text || if not image, just show text centered
+        $layoutClassLeft = '';
+        $layoutClassRight = '';
+
+
+        if(get_post_custom()['Alinhamento Texto'][0] != null){
+            $alignText = get_post_custom()['Alinhamento Texto'][0];
+
+            if($alignText == 'center'){
+                $layoutClassRight = 'col-12 offset-md-2 col-md-8 text-center';  
+            }else if($alignText == 'left'){
+                $layoutClassLeft = 'col-12 col-md-6';  
+                $layoutClassRight = 'col-12 col-md-6 text-left';  
+            }else{
+                $layoutClassLeft = 'col-12 col-md-6 order-2 order-md-1 text-right';  
+                $layoutClassRight = 'col-12 col-md-6 order-1 order-md-2';  
+            }
+        }
+
+        ?>
+
+        <section id="section-<?= get_post_field( 'post_name', get_post() ) ?>" class="section-content">
+            <div class="container">
+                <div class="row">
+                    <div class="<?= $layoutClassLeft ?>">
+                        <div class="box-image" style="background-image: url(<?= the_post_thumbnail_url( ); ?>); ">
+                            
+                        </div>
+                    </div>
+                    <div class="<?= $layoutClassRight ?> p-4">
+                        <h3 class="title-section bold"><?= the_title() ?></h3>
+                        <h4 class="subtitle"><?= get_post_custom('Subtitulo')[0] ?></h4>
+
+                        <div class="description"><?= the_content() ?></div>
+
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="content-main container">
-    <div class="row">
-        <div class="col-12 col-md-6 content-image">
-            <img src="<?php echo get_stylesheet_directory_uri(  ) . '/assets/img/img-placeholder-one.png' ?>" alt="" class="content-image__image">
-        </div>
-        <div class="col-12 col-md-6 content-text">
-            <div class="content-text__box pl-4">
-                <h3 class="title-section bold">Atípicos</h3>
+        <?php 
+            //$align = get_post_custom();
+            //print_r($align);
+            //the_post_thumbnail_url();
 
-                <h4 class="subtitle">Lorem ipsum, dolor sit amet. </h4>
+        ?>
 
-                <p class="content-text_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut magni reiciendis obcaecati ducimus fuga cumque. Id nostrum quod reprehenderit. Sapiente fugit dicta dolor beatae id exercitationem, sed nostrum qui?</p>
+    <?php 
+        endwhile;
+        wp_reset_postdata(); 
+    ?>
 
-                <button class="btn-main mb-5">Continue lendo...</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="content-main container">
-    <div class="row">
-        <div class="col-12 col-md-6 content-text text-right">
-            <div class="content-text__box pl-4">
-                <h3 class="title-section bold">Música</h3>
-                <h4 class="subtitle">Discografia | Singles | Trilhas</h4>
-
-                <p class="content-text__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut magni reiciendis obcaecati ducimus fuga cumque. Id nostrum quod reprehenderit. Sapiente fugit dicta dolor beatae id exercitationem, sed nostrum qui?</p>
-
-                <button class="btn-main mb-5">Ouça mais</button>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 content-image">
-            <img src="<?php echo get_stylesheet_directory_uri(  ) . '/assets/img/img-placeholder-two.png' ?>" alt="" class="content-image__image">
-        </div>
-    </div>
-</section>
-
-<section class="content-main container">
-    <div class="row">
-        <div class="col-12 col-md-6 content-image">
-            <img src="<?php echo get_stylesheet_directory_uri(  ) . '/assets/img/img-placeholder-three.png' ?>" alt="" class="content-image__image">
-        </div>
-        <div class="col-12 col-md-6 content-text">
-            <div class="content-text__box pl-4">
-                <h3 class="title-section bold">Atípicos</h3>
-
-                <h4 class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h4>
-
-                <p class="content-text_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut magni reiciendis obcaecati ducimus fuga cumque. Id nostrum quod reprehenderit. Sapiente fugit dicta dolor beatae id exercitationem, sed nostrum qui?</p>
-
-                <button class="btn-main mb-5">Continue lendo...</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="content-main container">
-    <div class="row">
-        <div class="col-12 col-md-6 content-text text-right">
-            <div class="content-text__box pl-4">
-                <h3 class="title-section bold">Vídeos</h3>
-
-                <h4 class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h4>
-
-                <p class="content-text_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut magni reiciendis obcaecati ducimus fuga cumque. Id nostrum quod reprehenderit. Sapiente fugit dicta dolor beatae id exercitationem, sed nostrum qui?</p>
-
-                <button class="btn-main mb-5">Veja mais</button>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 content-image">
-            <img src="<?php echo get_stylesheet_directory_uri(  ) . '/assets/img/img-placeholder-two.png' ?>" alt="" class="content-image__image">
-        </div>
-    </div>
-</section>
-
-<section class="content-main container">
-    <div class="row">
-        <div class="col-12 col-md-6 content-image">
-            <img src="<?php echo get_stylesheet_directory_uri(  ) . '/assets/img/img-placeholder-three.png' ?>" alt="" class="content-image__image">
-        </div>
-        <div class="col-12 col-md-6 content-text">
-            <div class="content-text__box pl-4">
-                <h3 class="title-section bold">Discos</h3>
-
-                <h4 class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h4>
-
-                <p class="content-text_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ut magni reiciendis obcaecati ducimus fuga cumque. Id nostrum quod reprehenderit. Sapiente fugit dicta dolor beatae id exercitationem, sed nostrum qui?</p>
-
-                <button class="btn-main mb-5">Continue lendo...</button>
-            </div>
-        </div>
-    </div>
-</section>
-
+</div>
 <?php get_footer(); ?>
