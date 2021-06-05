@@ -14,19 +14,39 @@
 <footer class="container">
     <div class="row">
         <div class="col-12 text-center">
-            <h2 class="title-section bold mb-3">Contatos</h2>
+            <h2 class="title-section bold mb-5">
+                <img src="https://lulacortes.com/wp-content/uploads/2021/06/contatos.png" alt="Contatos" title="Contatos">
+            </h2>
 
             <ul class="social-icons list-unstyled text-center">
-                <li class="social-icons__item d-inline"><a href="#" class="social-icons__link social-icons__link--actived"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="social-icons__item d-inline"><a href="#" class="social-icons__link"><i class="fab fa-instagram"></i></a></li>
-                <li class="social-icons__item d-inline"><a href="#" class="social-icons__link"><i class="fab fa-youtube"></i></a></li>
-                <li class="social-icons__item d-inline"><a href="#" class="social-icons__link"><i class="fab fa-spotify"></i></a></li>
-                <!-- <li class="social-icons__item d-inline"><a href="#" class="social-icons__link"><i class="fab fa-whatsapp"></i></a></li>
-                <li class="social-icons__item d-inline"><a href="#" class="social-icons__link"><i class="far fa-envelope"></i></a></li>
-                <li class="social-icons__item d-inline"><a href="#" class="social-icons__link"><i class="fas fa-mobile-alt"></i></a></li> -->
+                <li class="social-icons__item d-inline">
+                    <a href="https://www.facebook.com/redelulacortex/" target="_black" rel="noopener" class="social-icons__link social-icons__link--actived">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="social-icons__item d-inline">
+                    <a href="https://www.instagram.com/redelulacortex/" class="social-icons__link" target="_black" rel="noopener"> 
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-icons__item d-inline">
+                    <a href="https://www.youtube.com/channel/UCUOBZT_GjSklL8yigoEZ_hg" class="social-icons__link" target="_black" rel="noopener">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="social-icons__item d-inline">
+                    <a href="mailto:redelulacortex@gmail.com" target="_blank" class="social-icons__link" target="_black" rel="noopener">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </li>
+                <li class="social-icons__item d-inline">
+                    <a href="tel:5581997274146" class="social-icons__link" alt="(81) 9 9727-4146">
+                        <i class="fas fa-mobile-alt"></i>
+                    </a>
+                </li>
             </ul>
 
-            <div class="bootscore-info text-muted text-center mt-5">
+            <div class="bootscore-info text-muted text-center mt-5 mb-2">
                 <div class="container">
                     <small><a href="/"><?php bloginfo('name'); ?></a> &copy;&nbsp;<?php echo Date('Y'); ?></small>    
                 </div>
