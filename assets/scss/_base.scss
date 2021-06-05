@@ -11,11 +11,25 @@ body{
 }
 
 a{
+    color: $color-black !important;
+    font-size: 1rem;
+    padding: 5px;
+    text-decoration: none !important;
 
+    &:hover{
+        opacity: .5;
+    }
 }
 
+p{
+    font-size: 1.4rem;
+}
 .hidden{
     display: none !important;
+}
+
+.noVisibile{
+    visibility: hidden !important;
 }
 
 .btn-main{
@@ -39,7 +53,7 @@ a{
 } 
 
 .subtitle{
-    margin-top: -20px;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
@@ -61,7 +75,7 @@ a{
     background-repeat:no-repeat;
     background-size:contain;
     background-position:center;
-    background-size: 100% 100%; 
+    // background-size: 100% 100%; 
     background-repeat: no-repeat;
 
     // img{
@@ -75,4 +89,10 @@ a{
 
 #section-bio{
     margin-bottom: 0;
+}
+
+.section-content{
+    &:nth-child(2){
+        margin-top: 0;
+    }
 }
