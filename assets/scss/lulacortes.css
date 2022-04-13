@@ -6089,7 +6089,7 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
-.trans, .slick-prev,
+.trans, .menu-main, .slick-prev,
 .slick-next {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -6153,6 +6153,8 @@ body {
 
 .menu-main--dark {
   background-color: #000000;
+  padding: 15px 0 !important;
+  opacity: .8;
 }
 
 .menu-main--dark .button_container span {
@@ -6272,9 +6274,8 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-size: 2.2rem;
-  font-family: "Varela Round", serif;
-  font-weight: 400;
   text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 .overlay ul {

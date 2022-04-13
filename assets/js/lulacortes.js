@@ -1,16 +1,31 @@
 (function ($) {
     $(document).ready(function () {
+        $('.nav-link').on('click', function(){            
+            $('.toggle')[0].click();
+            //$('.toggle')[0].toggleClass('noVisibile');
+
+            var sectionToScroll = $(this).attr('href').replace('#', '#section-');
+            $("html, body").animate({
+                scrollTop: $(sectionToScroll).offset().top - 30
+            });
+        });
+
         $('.toggle').on('click', function () {
             $('.toggle').toggleClass('active');
             $('#overlay').toggleClass('open');
+            $('.button_container')[0].toggleClass('hidden');
         });
 
-        $('#slider-banners').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true
-        });
+        if($('#slider-banners').length > 0) {
+            $('#slider-banners').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                variableWidth: false
+            });
+        }
+        
 
         var $animation_elements = $('.slide');
         var $window = $(window);
@@ -34,19 +49,28 @@
             let sectionElement = document.getElementById('section-bio');
             let menuElement = $('.menu-main');
 
-            console.log('menu effect ', sectionElement.scrollTop);
+            //console.log('menu effect ', sectionElement.scrollTop);
         }
 
         $window.on('scroll resize', isOnView);
 
         $window.on('scroll resize', fixMenu);
 
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 50) {
-              $('nav').addClass('shrink');
-            } else {
-              $('nav').removeClass('shrink');
-            }
-        });
+        let sliderElement = document.getElementById('slider-banners');
+
+        if(sliderElement != null){
+            let elementHeight = sliderElement.offsetHeight;
+
+            $(window).scroll(function() {            
+                
+                if ($(document).scrollTop() > elementHeight) {
+                    $('.menu-main').addClass('shrink menu-main--dark');
+                } else {
+                    $('.menu-main').removeClass('shrink menu-main--dark');
+                }
+            });
+        }
+
+        
     });
 })(jQuery);

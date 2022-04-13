@@ -1,9 +1,12 @@
 .menu-main{
   padding: 30px 0;
   z-index: 99;
+  @extend .trans;
 
   &--dark{
     background-color: $color-black;
+    padding: 15px 0 !important;
+    opacity: .8;
 
     .button_container{
       span{
@@ -114,9 +117,9 @@
     height: 50%;
     top: 35%;
     transform: translateY(-50%);
-    font-size: 2.2rem;
-    font-family: "Varela Round", serif;  font-weight: 400;
+    font-size: 2.2rem;    
     text-align: center;
+    font-family: $font-default;
   }
 
   ul {

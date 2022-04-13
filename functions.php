@@ -35,13 +35,14 @@ function create_custom_post_type() {
             ),
             'public' => true,
             'has_archive' => true,
-            //'rewrite' => array('slug' => 'banners'),
             //'show_in_rest' => true,
             'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'), //'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'
             //'menu_position'       => 1,
             'exclude_from_search' => true 
         )
     );
+
+   
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_custom_post_type' );
