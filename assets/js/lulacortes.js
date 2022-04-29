@@ -22,7 +22,14 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: true,
-                variableWidth: false
+                variableWidth: false,
+                centerMode: true,
+                mobileFirst: true,
+                adaptiveHeight: false,
+                autoplay: false,
+                autoplaySpeed: 3000,
+                centerPadding: '0'
+        
             });
         }
         
