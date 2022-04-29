@@ -1,53 +1,60 @@
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 html,
-body{
-    overflow-x: hidden !important;
-    width: 100%;
-    height: auto;
-    font-family: 'Montserrat', sans-serif !important;
+body {
+  overflow-x: hidden !important;
+  width: 100%;
+  height: auto;
+  font-family: "Montserrat", sans-serif !important;
 }
 
-.hidden{
-    display: none !important;
+.hidden {
+  display: none !important;
 }
 
-.btn-main{
-    border: $border-2-black !important;
-    padding: 12px 20px;
-    border-radius: 25px;
-    background-color: $btn-main-bg;
-    color: $btn-main-color;
+.btn-main {
+  border: $border-2-black !important;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background-color: $btn-main-bg;
+  color: $btn-main-color;
 
-    //@include .trans;
+  //@include .trans;
 
-    &:hover{
-        background-color: $btn-main-bg-hover;
-        color: $btn-main-color-hover;
-    }
+  &:hover {
+    background-color: $btn-main-bg-hover;
+    color: $btn-main-color-hover;
+  }
 }
 
-.title-section{
-    font-size: 2.4rem;
-    text-transform: uppercase;
-}  
-
-.subtitle{
-    margin-top: -20px;
-    margin-bottom: 20px;
+.title-section {
+  font-size: 2.4rem;
+  text-transform: uppercase;
 }
 
-.bold{
-    font-weight: 700;
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
-.content-main{
-    margin: 80px 0;
+.bold {
+  font-weight: 700;
 }
 
-.description{
-    font-size: 1.2rem;
+.content-main {
+  margin: 80px 0;
 }
 
+.description {
+  font-size: 1.2rem;
+}
+
+.box-image {
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

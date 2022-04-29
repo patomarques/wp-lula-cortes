@@ -79,7 +79,7 @@
     <p>Text</p>
 </div> -->
 
-<div class="content-sections">
+<div class="content-sections mt-5">
     <?php while ( $queryInfos->have_posts() ) : $queryInfos->the_post(); ?>
 
         <?php
@@ -109,7 +109,7 @@
 
         <section id="section-<?= $slug ?>" class="section-content">
             <div class="container">
-                <div class="row">
+                <div class="row mb-5">
                     <div class="<?= $layoutClassLeft ?>">
                         <div class="box-image" style="background-image: url('<?= the_post_thumbnail_url( ); ?>'); ">
                             

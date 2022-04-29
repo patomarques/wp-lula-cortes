@@ -4560,7 +4560,7 @@ html, body {
   overflow-x: hidden !important;
   width: 100%;
   height: auto;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 .hidden {
   display: none !important;
@@ -4581,7 +4581,7 @@ html, body {
   text-transform: uppercase;
 }
 .subtitle {
-  margin-top: -20px;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 .bold {
@@ -4592,6 +4592,13 @@ html, body {
 }
 .description {
   font-size: 1.2rem;
+}
+.box-image {
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .menu-main {
   padding: 30px 0;

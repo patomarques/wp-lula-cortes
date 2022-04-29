@@ -107,7 +107,7 @@
 					<?php
 						endif;
 					?>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container -->
-		</nav><!-- /#header -->
+				</div>
+			</div>
+		</nav>
 	</header>
