@@ -1,8 +1,9 @@
 <?php 
 
-wp_enqueue_style( 'lulacortes-css', get_theme_file_uri() . '/assets/scss/lulacortes.css');
-
-wp_enqueue_script( 'lulacortes-js', get_theme_file_uri() . '/assets/js/lulacortes.js', array('jquery'), '1.0', true );
+function add_theme_scripts() {
+    wp_enqueue_style( 'lulacortes-css', get_theme_file_uri() . '/assets/scss/lulacortes.css');
+    wp_enqueue_script( 'lulacortes-js', get_theme_file_uri() . '/assets/js/lulacortes.js', array('jquery'), '1.0', true );
+}
 
 function hide_admin_bar(){ return false; }
 add_filter( 'show_admin_bar', 'hide_admin_bar' );
@@ -23,6 +24,7 @@ function create_custom_post_type() {
             //'show_in_rest' => true,
             'supports' => array( 'title', 'author', 'thumbnail', 'custom-fields'), //'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'
             //'menu_position'       => 1,
+            'menu_icon' => 'dashicons-format-gallery',
             'exclude_from_search' => true 
         )
     );
@@ -42,7 +44,233 @@ function create_custom_post_type() {
         )
     );
 
+    register_post_type( 'equipe',
+        array(
+            'labels' => array(
+                'name' => __( 'Equipe' ),
+                'singular_name' => __( 'Equipe' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),             
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'galeria',
+        array(
+            'labels' => array(
+                'name' => __( 'Galeria' ),
+                'singular_name' => __( 'Galeria' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            'menu_icon' => 'dashicons-format-gallery',
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'publicacoes',
+        array(
+            'labels' => array(
+                'name' => __( 'Publicações' ),
+                'singular_name' => __( 'Publicação' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'webminarios',
+        array(
+            'labels' => array(
+                'name' => __( 'Webnários' ),
+                'singular_name' => __( 'Webnário' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'albuns',
+        array(
+            'labels' => array(
+                'name' => __( 'Albuns' ),
+                'singular_name' => __( 'Albúm' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            'menu_icon' => 'dashicons-format-audio',
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'quadros',
+        array(
+            'labels' => array(
+                'name' => __( 'Quadros' ),
+                'singular_name' => __( 'Quadro' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            'menu_icon' => 'dashicons-format-image',
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'gravuras',
+        array(
+            'labels' => array(
+                'name' => __( 'Gravuras' ),
+                'singular_name' => __( 'Gravura' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            'menu_icon' => 'dashicons-format-image',
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'esbocos',
+        array(
+            'labels' => array(
+                'name' => __( 'Esboços' ),
+                'singular_name' => __( 'Esboço' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            'menu_icon' => 'dashicons-format-image',
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'memoria-grafica',
+        array(
+            'labels' => array(
+                'name' => __( 'Memória Gráfica' ),
+                'singular_name' => __( 'Memória Gráfica' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'videos',
+        array(
+            'labels' => array(
+                'name' => __( 'Vídeos' ),
+                'singular_name' => __( 'Vídeo' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            'menu_icon' => 'dashicons-format-video',
+            'exclude_from_search' => true 
+        )
+    );
+
    
+
+    register_post_type( 'livros',
+        array(
+            'labels' => array(
+                'name' => __( 'Livros' ),
+                'singular_name' => __( 'Livro' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            
+            'exclude_from_search' => true 
+        )
+    );
+
+register_post_type( 'zines',
+array(
+    'labels' => array(
+        'name' => __( 'Zines' ),
+        'singular_name' => __( 'Zine' )
+    ),
+    'public' => true,
+    'has_archive' => true,            
+    'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+    
+    'exclude_from_search' => true 
+)
+);
+
+    register_post_type( 'jogos',
+        array(
+            'labels' => array(
+                'name' => __( 'Jogos' ),
+                'singular_name' => __( 'Jogo' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'audiobooks',
+        array(
+            'labels' => array(
+                'name' => __( 'Audio Books' ),
+                'singular_name' => __( 'Audio Book' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'pdfs',
+        array(
+            'labels' => array(
+                'name' => __( 'Pdfs' ),
+                'singular_name' => __( 'Pdfs' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            'menu_icon' => 'dashicons-pdf',
+            'exclude_from_search' => true 
+        )
+    );
+
+    register_post_type( 'contatos',
+        array(
+            'labels' => array(
+                'name' => __( 'Contatos' ),
+                'singular_name' => __( 'Contato' )
+            ),
+            'public' => true,
+            'has_archive' => true,            
+            'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            
+            'exclude_from_search' => true 
+        )
+    );
+
 }
+
 // Hooking up our function to theme setup
 add_action( 'init', 'create_custom_post_type' );
+add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );

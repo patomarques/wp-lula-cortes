@@ -1,6 +1,11 @@
 {
+  "scripts": {
+    "test": "echo 'no test especified' && exit 1",
+    "scss": "node-sass --watch -scss -o css"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "node-sass": "^7.0.1",
     "sass": "^1.50.0",
     "slick-carousel": "^1.8.1"
   }
