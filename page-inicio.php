@@ -46,7 +46,7 @@
                     </div>
                     <div class="<?= $layoutClassRight ?> p-3">
                     
-                        <a href="/" >
+                        <a href="<?= get_post_field('Botão Link') ?>" >
                             <?php $image = get_site_url() . '/' . get_post_field('Imagem Title'); ?>    
 
                             <?php if (get_post_field('Imagem Title') != '') { ?>
@@ -69,11 +69,7 @@
         </section>
 
         <?php
-        $align = get_post_custom();
-        //print_r($align);
-        //print_r($align['Subtitulo'][0]);
-        //the_post_thumbnail_url();
-
+         $align = get_post_custom();
         ?>
 
     <?php

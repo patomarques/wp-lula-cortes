@@ -1,14 +1,13 @@
 <?php get_header(); ?>
 
-
 <div class="container-full page-header-parallax">
 	<!-- <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url() ?>"></div> -->
-	<div class="bg-header" style="background: url(<?php echo get_the_post_thumbnail_url() ?>) center/cover no-repeat fixed"> 
+	<div class="bg-header" style="background: url(<?php echo get_the_post_thumbnail_url() ?>) center/cover no-repeat fixed">
 		<div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url() ?>"></div>
 	</div>
 </div>
 
-<div class="container mt-5 pt-5">
+<div class="container mt-5 pt-5 mb-5">
 	<div class="row text-center ">
 		<div class="col-12 col-md-8 offset-md-2">
 			<?php the_post(); ?>
@@ -17,7 +16,9 @@
 	<div class="row">
 		<div class="col-md-8 offset-md-2 order-md-2">
 			<div id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+
+				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/bio.png' ?>" alt="Biografia" class="mb-5 text-center d-block">
+
 				<?php
 				the_content();
 

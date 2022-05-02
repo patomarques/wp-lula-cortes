@@ -4584,6 +4584,9 @@ a {
 a:hover {
   opacity: 0.5;
 }
+p {
+  font-size: 1rem;
+}
 .hidden {
   display: none !important;
 }
@@ -4636,6 +4639,31 @@ a:hover {
 }
 .section-content:nth-child(2) {
   margin-top: 0;
+}
+.page-header-parallax {
+  height: 70vh;
+  overflow: hidden;
+  perspective: 2px;
+  transform-style: preserve-3d;
+}
+.page-header-parallax .bg-header {
+  height: 100vh;
+  position: relative;
+  min-height: 700px;
+  transform-style: inherit;
+}
+.page-header-parallax .bg-header:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: translateZ(-1px) scale(1.5);
 }
 .menu-main {
   padding: 30px 0;
