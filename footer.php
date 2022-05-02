@@ -12,7 +12,7 @@
 
 ?>
 
-<footer class="container-full bg-black">
+<footer class="container-full bg-black mt-5 pt-5">
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">

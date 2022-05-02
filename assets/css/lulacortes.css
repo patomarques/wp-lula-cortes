@@ -4621,6 +4621,22 @@ a:hover {
   -webkit-filter: invert(1);
   filter: invert(1);
 }
+.box-image {
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section-content {
+  margin: 4rem 0;
+}
+#section-bio {
+  margin-bottom: 0;
+}
+.section-content:nth-child(2) {
+  margin-top: 0;
+}
 .menu-main {
   padding: 30px 0;
   z-index: 99;
@@ -4792,6 +4808,10 @@ a:hover {
   .navbar-brand img {
     height: 1.8rem !important;
   }
+}
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-size: 3rem;
 }
 .social-icons {
   padding-bottom: 50px;

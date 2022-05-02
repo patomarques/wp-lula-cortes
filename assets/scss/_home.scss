@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-.banner-main{
-    background-color: $color-gray;
-    // height: 60vh; 
-//    position: relative;
-=======
 .slick-slider {
   //background-color: $color-gray;
   height: 90vh !important;
@@ -12,7 +6,6 @@
   padding: 0;
   width: 100vw;
   overflow: hidden;
->>>>>>> develop
 
   .slick-slide {
     display: none;
@@ -23,78 +16,7 @@
     img {
       width: 100%;
       height: auto;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
-      // text-align: center;
     }
-<<<<<<< HEAD
-
-    img{
-      width: 100%;
-      height: auto; 
-      object-fit: cover;
-      max-width: 100%;
-      max-height: 100%;
-    }
-}
-
-.slick-slider{
-  
-}
-
-.module.content {
-  padding: 40px 0;
-}
-
-.module.parallax {
-  background-position: 50% 50%;
-  background-repeat: no-repeat; 
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.module.parallax h1 {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 48px;
-  line-height: 600px;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-// .module.parallax-1 {
-//   // background-image: url("https://images.unsplash.com/photo-1458640904116-093b74971de9");    
-//   background-image: url("https://images.unsplash.com/photo-1451906278231-17b8ff0a8880?crop=entropy&fit=crop&fm=jpg&h=900&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1700");
-// }
-
-// .module.parallax-2 {
-//   background-image: url("https://images.unsplash.com/photo-1437652010333-fbf2cd02a4f8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=9de65fa9bbcbd2401f3cb9cc3c8cf582");
-// }
-
-// .module.parallax-3 {
-//   background-image: url("https://images.unsplash.com/photo-1451906278231-17b8ff0a8880?crop=entropy&fit=crop&fm=jpg&h=900&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1700");
-// }
-// .module.parallax-4 {
-//   background-image: url("https://images.unsplash.com/photo-1437652010333-fbf2cd02a4f8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=9de65fa9bbcbd2401f3cb9cc3c8cf582");
-// }
-@media(min-width: 320px) {
-  .module.parallax{
-    height: 35vh;
-  }
-}
-
-@media(min-width: 450px) {
-  .module.parallax{
-    height: 45vh;
-  }
-}
-
-
-@media(min-width: 768px) {
-  .module.parallax{
-    height: 75vh;
-  }
-=======
   }
 }
 
@@ -109,7 +31,6 @@
   background-attachment: fixed;
   align-items: center;
   justify-content: center;
->>>>>>> develop
 }
 
 .slide {
