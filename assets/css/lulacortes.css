@@ -4768,23 +4768,6 @@ a:hover {
   text-decoration: none;
   overflow: hidden;
 }
-.overlay .navbar-nav .menu-item .nav-link:hover:after, .overlay .navbar-nav .menu-item .nav-link:focus:after, .overlay .navbar-nav .menu-item .nav-link:active:after {
-  width: 100%;
-}
-.overlay .navbar-nav .menu-item .nav-link:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  transform: translateX(-50%);
-  height: 3px;
-  background: #000000;
-  transition: 0.35s;
-}
-.overlay .navbar-nav .menu-item .nav-link:hover:after {
-  background-color: #ffffff;
-}
 @keyframes fadeInRight {
   0% {
     opacity: 0;
