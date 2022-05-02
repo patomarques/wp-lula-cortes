@@ -56,8 +56,7 @@
 	
 </div>
 
-<div id="wrapper">
-    <header class="menu-main menu-main--fixed">
+    <header class="menu-main menu-main--fixed menu-main--dark">
         <div class="container">
             <div class="row">
                 <div class="col-9">
@@ -111,3 +110,5 @@
 			</div>
 		</nav>
 	</header>
+
+	<div id="wrapper">
