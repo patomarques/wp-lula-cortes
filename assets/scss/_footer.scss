@@ -9,7 +9,6 @@
     font-size: 3rem;
     @include font-size(40px);
     @include transition(color 0.7s ease);
-    color: $color-green-dark !important;
 
     &:hover {
       opacity: 0.7;
@@ -31,4 +30,9 @@
 
 footer{
   padding: 50px 0 10px;
+
+  a{
+    color: $color-white !important;
+    
+  }
 }

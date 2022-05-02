@@ -56,6 +56,7 @@
             let sectionElement = document.getElementById('section-bio');
             let menuElement = $('.menu-main');
 
+            //menu-main--dark
             //console.log('menu effect ', sectionElement.scrollTop);
         }
 
