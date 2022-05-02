@@ -1,0 +1,17 @@
+.title-section {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  
+  color: $color-black;
+  @extend .trans;
+
+	&:hover{
+		opacity: .7;		
+	}
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 20px;
+}

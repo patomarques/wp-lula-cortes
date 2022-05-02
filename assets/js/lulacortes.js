@@ -13,7 +13,11 @@
         $('.toggle').on('click', function () {
             $('.toggle').toggleClass('active');
             $('#overlay').toggleClass('open');
+<<<<<<< HEAD
             //$(this).toggleClass('hidden ')
+=======
+            $('.button_container')[0].toggleClass('hidden');
+>>>>>>> develop
         });
 
         if($('#slider-banners').length > 0) {
@@ -22,7 +26,18 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: true,
+<<<<<<< HEAD
                 variableWidth: false
+=======
+                variableWidth: false,
+                centerMode: true,
+                mobileFirst: true,
+                adaptiveHeight: false,
+                autoplay: false,
+                autoplaySpeed: 3000,
+                centerPadding: '0'
+        
+>>>>>>> develop
             });
         }
         
@@ -49,6 +64,10 @@
             let sectionElement = document.getElementById('section-bio');
             let menuElement = $('.menu-main');
 
+<<<<<<< HEAD
+=======
+            //menu-main--dark
+>>>>>>> develop
             //console.log('menu effect ', sectionElement.scrollTop);
         }
 
