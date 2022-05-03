@@ -7,7 +7,7 @@ body {
   overflow-x: hidden !important;
   width: 100%;
   height: auto;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: $font-default !important;
 }
 
 a {
@@ -127,4 +127,59 @@ p{
       transform: translateZ(-1px) scale(1.5);
     }
   }
+}
+
+.box-image{
+  width: 50%;
+  overflow: hidden;
+
+  img{
+    width: 100vw;
+  }
+
+  &:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.list-nav{
+  &--item{
+    text-transform: uppercase; 
+    margin-right: 25px !important;
+    @extend .trans;
+    
+  }
+    
+  &--link{
+    color: $color-black !important;
+    font-weight: 700;
+    text-decoration: none !important;
+
+    &:after{
+      content: '';
+      width: 100%;
+      height: 4px;
+      display: block;
+      background-color: $color-white;
+      margin-top: 5px;
+    }
+
+    &:hover{
+      opacity: .5;
+
+      &:after{
+        background-color: $color-black;
+      }
+    }
+  }
+}
+
+.dropdown-toggle::after {
+  content: "";
+  border-top: 1.8em solid;
+  border-right: 1.8em solid transparent;
+  border-bottom: 0;
+  border-left: 1.8em solid transparent;
 }

@@ -145,9 +145,9 @@
 
     .menu-item {
       display: block;
-      height: 25%;
-      height: calc(100% / 6);
-      min-height: 50px;
+      //height: 25%;
+      height: calc(100% / 5);
+      //min-height: 50px;
       position: relative;
       opacity: 0;
 
@@ -157,6 +157,9 @@
         color: $color-white;
         text-decoration: none;
         overflow: hidden;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: $font-default;
 
         &:hover:after,
         &:focus:after,
