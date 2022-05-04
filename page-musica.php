@@ -7,7 +7,12 @@ $queryMusicas = new WP_Query($args);
 ?>
 
 <section class="container-full page-music list-content mt-5 pt-5">
-	<div class="container mt-4 mb-4">
+	<div class="container">
+		<div class="row mt-2 mb-5">
+			<div class="col-12 text-center">
+				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/musica.png' ?>" alt="" class="d-block">
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-12">
 				<ul class="list-nav list-inline">
@@ -34,16 +39,19 @@ $queryMusicas = new WP_Query($args);
 
 		<?php while ($queryMusicas->have_posts()) : $queryMusicas->the_post(); ?>
 
-			<div class="row mt-2 mb-2">
-				<div class="col-12 col-sm-8 col-md-6">
-					<div class="box-image">
-						<?= get_the_post_thumbnail() ?>
+			<div class="row pt-3 pb-3">
+				<div class="col-12 col-md-6">
+					<div class="square">
+						<div class="content" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
+						
+						</div>
 					</div>
-
 				</div>
-				<div class="col-12 col-sm-4 col-md-6">
-					<h2 class="title-album"><?php echo get_the_title(); ?></h2>
-					<h3 class="subtitle-album"><?php echo get_post_field('Ano Lançamento'); ?></h3>
+				<div class="col-12 col-md-6">
+					<div class="content-info p-4">
+						<h2 class="title-album"><?php echo get_the_title(); ?></h2>
+						<h3 class="subtitle-album"><?//php echo get_post_field('Ano Lançamento'); ?></h3>
+					</div>
 				</div>
 			</div>
 

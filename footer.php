@@ -10,6 +10,8 @@
  * @package Bootscore
  */
 
+    $args = array('post_type' => 'contato', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
+    $queryContact = new WP_Query($args);
 ?>
 
 <footer class="container-full bg-black mt-5 pt-5">
