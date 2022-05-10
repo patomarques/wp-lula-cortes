@@ -1,5 +1,18 @@
 (function ($) {
     $(document).ready(function () {
+
+        function setSlickImages() {
+           let items = document.querySelectorAll('.banner-main__item');
+           console.log('items', items);
+
+           items.forEach(function(element){
+               //element.style.setProperty(':after', '');
+            //this.style.setProperty(':after', 'background-image: url(' + element.dataSet('image') + ')');
+           });
+        }
+
+        setSlickImages();
+
         $('.nav-link').on('click', function(){            
             let toggle = $('.toggle')[0]
             toggle.click();

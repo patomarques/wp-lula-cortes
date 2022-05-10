@@ -204,6 +204,17 @@ p {
   background-size: cover;
 }
 
+.content-text-valign{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-header{
+  height: 90vh;
+  overflow: hidden;
+}
+
 @media (min-width: 320px) {
   .list-nav--item {
     margin-right: 15px !important;

@@ -4725,6 +4725,15 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.content-text-valign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page-header {
+  height: 90vh;
+  overflow: hidden;
+}
 @media (min-width: 320px) {
   .list-nav--item {
     margin-right: 15px !important;
@@ -4870,6 +4879,20 @@ p {
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
 }
+.overlay .navbar-nav .menu-item .nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #000000;
+  transition: 0.35s;
+}
+.overlay .navbar-nav .menu-item .nav-link:hover:after {
+  background-color: #ffffff;
+}
 @keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -4917,6 +4940,9 @@ p {
 .social-icons__link:hover {
   opacity: 0.7;
 }
+.social-icons__link i {
+  color: #ffffff;
+}
 .social-icons .fa-facebook-f {
   font-size: 2rem;
   position: relative;
@@ -4932,6 +4958,9 @@ footer {
 }
 footer a {
   color: #ffffff !important;
+}
+.footer-info {
+  font-size: 1rem;
 }
 .slick-slider {
   height: 90vh !important;
@@ -4950,6 +4979,33 @@ footer a {
 .slick-slider .slick-slide img {
   width: 100%;
   height: auto;
+}
+.banner-main {
+  position: relative;
+  overflow: hidden;
+}
+.banner-main__item {
+  position: relative;
+  overflow: hidden;
+}
+.banner-main__item:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.6;
+  background-image: url('https://images.pexels.com/photos/1084542/pexels-photo-1084542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .hero {
   display: flex;
@@ -5112,4 +5168,8 @@ a.slide__next, .slider::after {
   border-radius: 50%;
   background-color: black;
   margin: 0 10px 0 10px;
+}
+/* slider banner css */
+.slider-banner .slider-banner__item:nth-child(2), .slider-banner .slider-banner__item:nth-child(3) {
+  display: none;
 }

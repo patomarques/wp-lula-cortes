@@ -167,21 +167,21 @@
           //width: 100%;
         }
 
-        // &:after {
-        //   content: "";
-        //   position: absolute;
-        //   bottom: 0;
-        //   left: 50%;
-        //   width: 0%;
-        //   transform: translateX(-50%);
-        //   height: 3px;
-        //   background: $color-black;
-        //   transition: 0.35s;
-        // }
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: $color-black;
+          transition: 0.35s;
+        }
 
         &:hover{
           &:after{
-            //background-color: $color-white;
+            background-color: $color-white;
           }
         }
       }
