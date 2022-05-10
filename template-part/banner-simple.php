@@ -8,10 +8,10 @@
 
 <?php //echo do_shortcode('[slick-slider]'); ?>
 
-<div id="slider-banners" class="container-full banner-main">
+<div id="slider-banners" class="container-full banner-main hidden">
     <?php while ( $bannerQuery->have_posts() ) : $bannerQuery->the_post(); ?>
-    <div class="banner-main__item" > 
-    <?= get_the_post_thumbnail( ) ?>
+    <div class="banner-main__item" data-image="<?= get_the_post_thumbnail_url() ?>"> 
+       
     </div>
     <?php 
         endwhile;
@@ -19,13 +19,15 @@
     ?>
 </div>
 
-<?php while ( $bannerQuery->have_posts() ) : $bannerQuery->the_post(); ?>
-    <div class="hero hidden" style="background-image: url(<?= get_the_post_thumbnail_url( ) ?>)"> 
-    </div>
-<?php 
-    endwhile;
-    wp_reset_postdata(); 
-?>
+<div class="container-full slider-banner">
+    <?php while ( $bannerQuery->have_posts() ) : $bannerQuery->the_post(); ?>
+        <div class="hero slider-banner__item" style="background-image: url(<?= get_the_post_thumbnail_url( ) ?>)"> 
+        </div>
+    <?php 
+        endwhile;
+        wp_reset_postdata(); 
+    ?>
+</div>
 
 <div class="slider-container hidden">-
     <div class="slider">

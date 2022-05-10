@@ -1,9 +1,18 @@
 <?php get_header(); ?>
 
-<div class="container-full page-header-parallax">
+<div class="container-full hidden">  <!--  page-header-parallax -->
+	<div class="page-header header-parallax">
+		<?= get_the_post_thumbnail()?>
+	</div>
+
 	<!-- <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url() ?>"></div> -->
-	<div class="bg-header" style="background: url(<?php echo get_the_post_thumbnail_url() ?>) center/cover no-repeat fixed">
+	<div class="bg-header hidden" style="background: url(<?php echo get_the_post_thumbnail_url() ?>) center/cover no-repeat fixed">
 		<div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url() ?>"></div>
+	</div>
+</div>
+
+<div class="container-full slider-banner">
+	<div class="hero slider-banner__item" style="background-image: url(<?= get_the_post_thumbnail_url( ) ?>)"> 
 	</div>
 </div>
 
@@ -14,8 +23,8 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-8 offset-md-2 order-md-2">
-			<div id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
+		<div class="col-md-8 offset-md-2">
+			<div id="post-<?php the_ID(); ?>" class="wrapper">
 
 				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/bio.png' ?>" alt="Biografia" class="mb-5 text-center d-block">
 

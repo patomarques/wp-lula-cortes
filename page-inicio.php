@@ -22,7 +22,7 @@
             $alignText = get_post_custom()['Alinhamento Texto'][0];
 
             if ($alignText == 'center') {
-                $layoutClassRight = 'col-12 offset-md-2 col-md-8 text-center';
+                $layoutClassRight = 'col-12 offset-md-2 col-md-6 text-center';
             } else if ($alignText == 'left') {
                 $layoutClassLeft = 'col-12 col-md-6';
                 $layoutClassRight = 'col-12 col-md-6 text-left';
@@ -40,11 +40,13 @@
             <div class="container">
                 <div class="row">
                     <div class="<?= $layoutClassLeft ?>">
-                        <div class="box-image" style="background-image: url('<?= the_post_thumbnail_url(); ?>'); ">
-
+                        <div class="square">
+                            <div class="content" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
+                            
+                            </div>
                         </div>
                     </div>
-                    <div class="<?= $layoutClassRight ?> p-3">
+                    <div class="<?= $layoutClassRight ?> p-5 content-text-valign">
                     
                         <a href="<?= get_post_field('Botão Link') ?>" >
                             <?php $image = get_site_url() . '/' . get_post_field('Imagem Title'); ?>    

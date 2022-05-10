@@ -8,12 +8,12 @@ $queryMusicas = new WP_Query($args);
 
 <section class="container-full page-music list-content mt-5 pt-5">
 	<div class="container">
-		<div class="row mt-2 mb-5">
+		<div class="row mt-4 mb-5">
 			<div class="col-12 text-center">
-				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/musica.png' ?>" alt="" class="d-block">
+				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/musica.png' ?>" alt="Músicas (Álbuns)" class="mx-auto d-block">
 			</div>
 		</div>
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-12">
 				<ul class="list-nav list-inline">
 					<li class="list-nav--item list-inline-item">
@@ -33,7 +33,7 @@ $queryMusicas = new WP_Query($args);
 					</li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<div class="container">
 

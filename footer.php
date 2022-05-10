@@ -55,9 +55,11 @@
                     </li>
                 </ul>
 
-                <div class="bootscore-info text-muted text-center mt-5 mb-2">
+                <div class="bootscore-info text-muted text-center mt-5 mb-4">
                     <div class="container">
-                        <small><a href="/"><?php bloginfo('name'); ?></a> &copy;&nbsp;<?php echo Date('Y'); ?></small>
+                        <span class="footer-info">
+                            <a href="/"><?php bloginfo('name'); ?></a> &copy;&nbsp;<?php echo Date('Y'); ?></small>
+                        </span>
                     </div>
                 </div>
             </div>
