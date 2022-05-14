@@ -1,43 +1,46 @@
-<?php get_header(); ?>
+<?php get_header();
 
+global $post;
+$post_slug = $post->post_name;
 
-<div class="container-full page-header-parallax">
-	<!-- <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url() ?>"></div> -->
-	<div class="bg-header" style="background: url(<?php echo get_the_post_thumbnail_url() ?>) center/cover no-repeat fixed"> 
-		<div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url() ?>"></div>
-	</div>
-</div>
+print_r($post_slug);
 
-<div class="container mt-5 pt-5">
-	<div class="row text-center ">
-		<div class="col-12 col-md-8 offset-md-2">
-			<?php the_post(); ?>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-8 offset-md-2 order-md-2">
-			<div id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<?php
-				the_content();
+$args = array('post_type' => $post_slug, 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
+$query = new WP_Query($args);
 
-				wp_link_pages(array(
-					'before' => '<div class="page-links">' . __('Pages:', 'wp_lula_cortes'),
-					'after'  => '</div>',
-				));
-				edit_post_link(__('Edit', 'wp_lula_cortes'), '<span class="edit-link">', '</span>');
-				?>
+//print_r($query);
+?>
+
+<section class="container-full page-music list-content mt-5 pt-5">
+	<div class="container">
+		<div class="row mt-4 mb-5">
+			<div class="col-12 text-center">
+				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/' . $post_slug .'.png' ?>" alt="<?= get_the_title() ?>" class="mx-auto d-block">
 			</div>
-			<?php
-			// If comments are open or we have at least one comment, load up the comment template
-			if (comments_open() || get_comments_number()) :
-				comments_template();
-			endif;
-			?>
 		</div>
-
+		
 	</div>
-</div>
+	<div class="container">
+
+		<?php while ($query->have_posts()) : $query->the_post(); ?>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<?= get_the_content() ?>
+			</div>
+		</div>
+		<?php
+		endwhile;
+		wp_reset_postdata();
+		?>
+	</div>
+</section>
+
+<script>
+	jQuery(document).ready(function() {
+		jQuery('.menu-main').addClass('shrink menu-main--dark');
+	});
+</script>
 
 <?php
-get_footer();
+get_footer(); ?>

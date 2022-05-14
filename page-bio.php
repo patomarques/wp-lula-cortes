@@ -14,7 +14,7 @@
 <div class="container-full slider-banner">
 	<div class="hero slider-banner__item" style="background-image: url(<?= get_the_post_thumbnail_url( ) ?>)"> 
 	</div>
-</div>
+	</div>
 
 <div class="container mt-5 pt-5 mb-5">
 	<div class="row text-center ">
