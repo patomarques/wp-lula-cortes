@@ -3,8 +3,17 @@
 global $post;
 $post_slug = $post->post_name;
 
-$args = array('post_type' => $post_slug, 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
-$query = new WP_Query($args);
+$argsQuadros = array('post_type' => 'quadros', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
+$queryQuadros = new WP_Query($argsQuadros);
+
+$argsGravuras = array('post_type' => 'gravuras', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
+$queryGravuras = new WP_Query($argsGravuras);
+
+$argsEsbocos = array('post_type' => 'esbocos', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
+$queryEsbocos = new WP_Query($argsEsbocos);
+
+$argsMemoriaGrafica = array('post_type' => 'memoria-grafica', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
+$queryMemoriaGrafica = new WP_Query($argsMemoriaGrafica);
 
 $argsTeam = array('post_type' => 'equipe', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
 $queryTeam = new WP_Query($argsTeam);
@@ -18,45 +27,31 @@ $queryTeam = new WP_Query($argsTeam);
 				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/' . $post_slug . '.png' ?>" alt="<?= get_the_title() ?>" class="mx-auto d-block">
 			</div>
 		</div>
-	</div>
-	<div class="container hidden">
-
-		<?php while ($query->have_posts()) : $query->the_post(); ?>
-
-			<div class="row">
-				<div class="col-xs-12">
-					<?= get_the_content() ?>
-				</div>
-			</div>
-		<?php
-		endwhile;
-		wp_reset_postdata();
-		?>
-	</div>
+	</div>	
 </section>
 
-<section id="section-nav-category" class="container-full mb-3">
+<section id="section-nav-category" class="container-full mb-5">
 	<div class="container breadcrumbs-nav">
 		<div class="row">
 			<div class="col-12">
 				<ul class="list-nav list-inline">
-					<li class="list-nav--item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav--link">
-							Pesquisa
-						</a>
-					</li>
-					<li class="list-nav--item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav--link">
+					<li class="list-nav__item list-nav__item-actived list-inline-item">
+						<a href="javascript:void(0)" class="list-nav__link">
 							Quadros
 						</a>
 					</li>
-					<li class="list-nav--item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav--link">
+					<li class="list-nav__item list-inline-item">
+						<a href="javascript:void(0)" class="list-nav__link">
 							Gravuras
 						</a>
 					</li>
-					<li class="list-nav--item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav--link">
+					<li class="list-nav__item list-inline-item">
+						<a href="javascript:void(0)" class="list-nav__link">
+							Esboços
+						</a>
+					</li>
+					<li class="list-nav__item list-inline-item">
+						<a href="javascript:void(0)" class="list-nav__link">
 							Memória Gráfica
 						</a>
 					</li>
@@ -70,38 +65,38 @@ $queryTeam = new WP_Query($argsTeam);
 	<div class="slick-squares">
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
+				<p class="slick-squares__title">Quadro Title</p>
 				<p class="slick-squares__subtitle">2000</p>
 			</div>
 			<div class="slick-squares__box-image"></div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
+				<p class="slick-squares__title">Quadro Title</p>
 				<p class="slick-squares__subtitle">2000</p>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
+				<p class="slick-squares__title">Quadro Title</p>
 				<p class="slick-squares__subtitle">2000</p>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
+				<p class="slick-squares__title">Quadro Title</p>
 				<p class="slick-squares__subtitle">2000</p>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
+				<p class="slick-squares__title">Quadro Title</p>
 				<p class="slick-squares__subtitle">2000</p>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
+				<p class="slick-squares__title">Quadro Album</p>
 				<p class="slick-squares__subtitle">2000</p>
 			</div>
 		</div>
@@ -112,38 +107,120 @@ $queryTeam = new WP_Query($argsTeam);
 	<div class="slick-squares">
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
-				<p class="slick-squares__subtitle">2000</p>
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
-				<p class="slick-squares__subtitle">2000</p>
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
-				<p class="slick-squares__subtitle">2000</p>
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
-				<p class="slick-squares__subtitle">2000</p>
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
-				<p class="slick-squares__subtitle">2000</p>
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Title Album</p>
-				<p class="slick-squares__subtitle">2000</p>
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container-full content-slick-squares mb-5">
+	<div class="slick-squares">
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Esboços Title</p>
+				<p class="slick-squares__subtitle">1989</p>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Esboços Title</p>
+				<p class="slick-squares__subtitle">1989</p>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Esboços Title</p>
+				<p class="slick-squares__subtitle">1989</p>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Esboços Title</p>
+				<p class="slick-squares__subtitle">1989</p>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Esboços Title</p>
+				<p class="slick-squares__subtitle">1989</p>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Esboços Title</p>
+				<p class="slick-squares__subtitle">1989</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container-full content-slick-squares mb-5">
+	<div class="slick-squares">
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Memória Gráfica Title</p>
+				<p class="slick-squares__subtitle">1993</p>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Memória Gráfica Title</p>
+				<p class="slick-squares__subtitle">1993</p>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Memória Gráfica Title</p>
+				<p class="slick-squares__subtitle">1993</p>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Memória Gráfica Title</p>
+				<p class="slick-squares__subtitle">1993</p>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Memória Gráfica Title</p>
+				<p class="slick-squares__subtitle">1993</p>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Memória Gráfica Title</p>
+				<p class="slick-squares__subtitle">1993</p>
 			</div>
 		</div>
 	</div>
