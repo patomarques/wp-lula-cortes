@@ -68,12 +68,8 @@ $queryTeam = new WP_Query($argsTeam);
 				<p class="slick-squares__title">Quadro Title</p>
 				<p class="slick-squares__subtitle">2000</p>
 			</div>
-			<div class="slick-squares__box-image"></div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Quadro Title</p>
-				<p class="slick-squares__subtitle">2000</p>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 		<div class="slick-squares__item">
@@ -81,17 +77,35 @@ $queryTeam = new WP_Query($argsTeam);
 				<p class="slick-squares__title">Quadro Title</p>
 				<p class="slick-squares__subtitle">2000</p>
 			</div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Quadro Title</p>
-				<p class="slick-squares__subtitle">2000</p>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
 				<p class="slick-squares__title">Quadro Title</p>
 				<p class="slick-squares__subtitle">2000</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Quadro Title</p>
+				<p class="slick-squares__subtitle">2000</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Quadro Title</p>
+				<p class="slick-squares__subtitle">2000</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 		<div class="slick-squares__item">
@@ -99,46 +113,8 @@ $queryTeam = new WP_Query($argsTeam);
 				<p class="slick-squares__title">Quadro Album</p>
 				<p class="slick-squares__subtitle">2000</p>
 			</div>
-		</div>
-	</div>
-</section>
-
-<section class="container-full content-slick-squares mb-5">
-	<div class="slick-squares">
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Gravuras Title</p>
-				<p class="slick-squares__subtitle">1991</p>
-			</div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Gravuras Title</p>
-				<p class="slick-squares__subtitle">1991</p>
-			</div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Gravuras Title</p>
-				<p class="slick-squares__subtitle">1991</p>
-			</div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Gravuras Title</p>
-				<p class="slick-squares__subtitle">1991</p>
-			</div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Gravuras Title</p>
-				<p class="slick-squares__subtitle">1991</p>
-			</div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Gravuras Title</p>
-				<p class="slick-squares__subtitle">1991</p>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 	</div>
@@ -148,8 +124,70 @@ $queryTeam = new WP_Query($argsTeam);
 	<div class="slick-squares">
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Gravuras Title</p>
+				<p class="slick-squares__subtitle">1991</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container-full content-slick-squares mb-5">
+	<div class="slick-squares">
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
 				<p class="slick-squares__title">Esboços Title</p>
 				<p class="slick-squares__subtitle">1989</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 		<div class="slick-squares__item">
@@ -157,11 +195,8 @@ $queryTeam = new WP_Query($argsTeam);
 				<p class="slick-squares__title">Esboços Title</p>
 				<p class="slick-squares__subtitle">1989</p>
 			</div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Esboços Title</p>
-				<p class="slick-squares__subtitle">1989</p>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 		<div class="slick-squares__item">
@@ -169,17 +204,35 @@ $queryTeam = new WP_Query($argsTeam);
 				<p class="slick-squares__title">Esboços Title</p>
 				<p class="slick-squares__subtitle">1989</p>
 			</div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Esboços Title</p>
-				<p class="slick-squares__subtitle">1989</p>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
 				<p class="slick-squares__title">Esboços Title</p>
 				<p class="slick-squares__subtitle">1989</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Esboços Title</p>
+				<p class="slick-squares__subtitle">1989</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Esboços Title</p>
+				<p class="slick-squares__subtitle">1989</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 	</div>
@@ -192,11 +245,8 @@ $queryTeam = new WP_Query($argsTeam);
 				<p class="slick-squares__title">Memória Gráfica Title</p>
 				<p class="slick-squares__subtitle">1993</p>
 			</div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Memória Gráfica Title</p>
-				<p class="slick-squares__subtitle">1993</p>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 		<div class="slick-squares__item">
@@ -204,11 +254,8 @@ $queryTeam = new WP_Query($argsTeam);
 				<p class="slick-squares__title">Memória Gráfica Title</p>
 				<p class="slick-squares__subtitle">1993</p>
 			</div>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<p class="slick-squares__title">Memória Gráfica Title</p>
-				<p class="slick-squares__subtitle">1993</p>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 		<div class="slick-squares__item">
@@ -216,11 +263,35 @@ $queryTeam = new WP_Query($argsTeam);
 				<p class="slick-squares__title">Memória Gráfica Title</p>
 				<p class="slick-squares__subtitle">1993</p>
 			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
 		</div>
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
 				<p class="slick-squares__title">Memória Gráfica Title</p>
 				<p class="slick-squares__subtitle">1993</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Memória Gráfica Title</p>
+				<p class="slick-squares__subtitle">1993</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
+			</div>
+		</div>
+		<div class="slick-squares__item">
+			<div class="slick-squares__item__text">
+				<p class="slick-squares__title">Memória Gráfica Title</p>
+				<p class="slick-squares__subtitle">1993</p>
+			</div>
+			<div class="slick-squares__box-image" style="background-image: url(<?= get_the_post_thumbnail_url()?>)">
+				<div class="slick-squares__box-image__spacer"></div>
 			</div>
 		</div>
 	</div>
