@@ -151,10 +151,10 @@
 
     $window.on("scroll resize", fixMenu);
 
-    let sliderElement = document.getElementById("slider-banners");
+    let headerImage = document.getElementsByClassName("header-image");
 
-    if (sliderElement != null) {
-      let elementHeight = sliderElement.offsetHeight;
+    if (headerImage.length > 0) {
+      let elementHeight = headerImage[0].offsetHeight;
 
       $(window).scroll(function () {
         if ($(document).scrollTop() > elementHeight) {

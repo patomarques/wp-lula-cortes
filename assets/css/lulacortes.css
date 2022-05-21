@@ -4762,7 +4762,7 @@ p {
 .slick-squares__item__text {
   background-color: #ffffff;
   color: #000000;
-  padding: 0;
+  padding-left: 15px;
   margin-bottom: 10px;
 }
 .slick-squares__item:after {
@@ -4775,13 +4775,15 @@ p {
 .slick-squares__title, .slick-squares__subtitle {
   margin-bottom: 0;
 }
+.slick-squares__link {
+  padding: 0;
+}
 .slick-squares__box-image {
   float: left;
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 10px;
 }
 .slick-squares__box-image__spacer {
   width: 100%;
