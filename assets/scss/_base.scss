@@ -67,3 +67,31 @@ a {
   -webkit-filter: invert(1);
   filter: invert(1);
 }
+
+.box-image{
+    // position: relative;
+    height: 30vh;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    // background-size: 100% 100%; 
+    background-repeat: no-repeat;
+
+    // img{
+    //     width: 100%;
+    // }
+}
+
+.section-content{
+    margin: 4rem 0;    
+}
+
+#section-bio{
+    margin-bottom: 0;
+}
+
+.section-content{
+    &:nth-child(2){
+        margin-top: 0;
+    }
+}
