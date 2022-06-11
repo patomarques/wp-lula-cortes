@@ -4560,6 +4560,7 @@ readers do not read off random characters that represent icons */
   font-size: 3rem;
   text-transform: uppercase;
   text-decoration: none !important;
+  font-family: 'Raleway', sans-serif !important;
   color: #000000;
 }
 .title-section:hover {
@@ -4569,14 +4570,23 @@ readers do not read off random characters that represent icons */
   margin-top: 0;
   margin-bottom: 20px;
 }
+.slick-squares__title {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.slick-squares__subtitle {
+  font-size: 1.2rem;
+}
 html {
   scroll-behavior: smooth;
 }
 html, body {
   overflow-x: hidden !important;
   width: 100%;
-  height: auto;
-  font-family: 'Raleway', sans-serif !important;
+  height: 100%;
+  font-family: 'Raleway', sans-serif !important !important;
 }
 a {
   color: #000000;
@@ -4679,20 +4689,11 @@ p {
 }
 .list-nav--item {
   text-transform: uppercase;
-  margin-right: 25px !important;
 }
 .list-nav--link {
   color: #000000 !important;
   font-weight: 700;
   text-decoration: none !important;
-}
-.list-nav--link:after {
-  content: '';
-  width: 100%;
-  height: 4px;
-  display: block;
-  background-color: #ffffff;
-  margin-top: 5px;
 }
 .list-nav--link:hover {
   opacity: 0.5;
@@ -4706,6 +4707,108 @@ p {
   border-right: 1.8em solid transparent;
   border-bottom: 0;
   border-left: 1.8em solid transparent;
+}
+.square {
+  position: relative;
+  width: 100%;
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content-text-valign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page-header {
+  height: 90vh;
+  overflow: hidden;
+}
+.card-team:hover {
+  cursor: grab;
+}
+.card-thumbnail {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slick-squares {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.slick-squares__item {
+  width: 25vw;
+  position: relative;
+}
+.slick-squares__item__text {
+  background-color: #ffffff;
+  color: #000000;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+.slick-squares__item:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  width: 100%;
+  height: 0;
+}
+.slick-squares__title, .slick-squares__subtitle {
+  margin-bottom: 0;
+}
+.slick-squares__link {
+  padding: 0;
+}
+.slick-squares__box-image {
+  float: left;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slick-squares__box-image__spacer {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+.slick-prev:after, .slick-prev:before {
+  color: #000000;
+}
+.content-slick-squares {
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 320px) {
+  .list-nav--item {
+    margin-right: 15px !important;
+  }
+  .list-nav--link {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  .list-nav--item {
+    margin-right: 25px !important;
+  }
 }
 .menu-main {
   padding: 30px 0;
@@ -4813,7 +4916,7 @@ p {
   transform: translateY(-50%);
   font-size: 2.2rem;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif !important;
 }
 .overlay .navbar-nav {
   list-style: none;
@@ -4837,7 +4940,21 @@ p {
   overflow: hidden;
   font-size: 2rem;
   text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif !important;
+}
+.overlay .navbar-nav .menu-item .nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #000000;
+  transition: 0.35s;
+}
+.overlay .navbar-nav .menu-item .nav-link:hover:after {
+  background-color: #ffffff;
 }
 @keyframes fadeInRight {
   0% {
@@ -4852,6 +4969,45 @@ p {
 .navbar-brand {
   position: relative;
   z-index: 9;
+}
+.breadcrumbs-nav {
+  position: relative;
+}
+.breadcrumbs-nav:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+  margin-top: -5px;
+}
+.breadcrumbs-nav .list-nav__item {
+  position: relative;
+  margin-right: -5px !important;
+}
+.breadcrumbs-nav .list-nav__item:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+}
+.breadcrumbs-nav .list-nav__item-actived:after {
+  display: block;
+}
+.breadcrumbs-nav .list-nav__item:hover {
+  opacity: 0.5;
+}
+.breadcrumbs-nav .list-nav__item:hover:after {
+  display: block;
+}
+.breadcrumbs-nav .list-nav__link {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 @media (min-width: 320px) {
   .navbar-brand img {
@@ -4886,6 +5042,9 @@ p {
 .social-icons__link:hover {
   opacity: 0.7;
 }
+.social-icons__link i {
+  color: #ffffff;
+}
 .social-icons .fa-facebook-f {
   font-size: 2rem;
   position: relative;
@@ -4902,8 +5061,10 @@ footer {
 footer a {
   color: #ffffff !important;
 }
+.footer-info {
+  font-size: 1rem;
+}
 .slick-slider {
-  height: 90vh !important;
   position: relative;
   margin: 0;
   padding: 0;
@@ -4919,6 +5080,33 @@ footer a {
 .slick-slider .slick-slide img {
   width: 100%;
   height: auto;
+}
+.banner-main {
+  position: relative;
+  overflow: hidden;
+}
+.banner-main__item {
+  position: relative;
+  overflow: hidden;
+}
+.banner-main__item:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.6;
+  background-image: url('https://images.pexels.com/photos/1084542/pexels-photo-1084542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .hero {
   display: flex;
@@ -5081,4 +5269,8 @@ a.slide__next, .slider::after {
   border-radius: 50%;
   background-color: black;
   margin: 0 10px 0 10px;
+}
+/* slider banner css */
+.slider-banner .slider-banner__item:nth-child(2), .slider-banner .slider-banner__item:nth-child(3) {
+  display: none;
 }
