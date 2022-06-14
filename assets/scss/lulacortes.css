@@ -6406,6 +6406,12 @@ p {
   position: relative;
 }
 
+.btn-custom {
+  display: inline-block;
+  width: 12vw;
+  margin: 0 auto;
+}
+
 @media (min-width: 320px) {
   .list-nav--item {
     margin-right: 15px !important;

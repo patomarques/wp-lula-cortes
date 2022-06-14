@@ -1,6 +1,7 @@
 (function ($) {
   $(document).ready(function () {
 
+    //loadBannerSliders();
     loadSlickTeam();
     loadSlickSquares();
     //setSlickImages();
@@ -44,8 +45,8 @@
 
     function loadSlickSquares() {
       let element = $(".slick-squares");
-        console.log('element', element);
-      if (element != undefined) {
+
+      if (element != undefined && element.lenght > 0) {
         element.slick({
           slidesToShow: 4,
           dots: true,
@@ -54,7 +55,7 @@
               breakpoint: 1024,
               settings: {
                 slidesToShow: 4,
-                slidesToScroll: 1               
+                slidesToScroll: 1
               },
             },
             {
@@ -102,22 +103,6 @@
       $(".button_container")[0].classList.add("hidden");
     });
 
-    if ($("#slider-banners").length > 0) {
-      $("#slider-banners").slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        variableWidth: false,
-        centerMode: true,
-        mobileFirst: true,
-        adaptiveHeight: false,
-        autoplay: false,
-        autoplaySpeed: 3000,
-        centerPadding: "0",
-      });
-    }
-
     var $animation_elements = $(".slide");
     var $window = $(window);
 
@@ -139,8 +124,28 @@
       });
     }
 
+    function loadBannerSliders() {
+      if ($("#slider-banners").length > 0) {
+        console.log('slider banner ', $("#slider-banners"));
+
+        $("#slider-banners").slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          variableWidth: false,
+          centerMode: true,
+          mobileFirst: true,
+          adaptiveHeight: false,
+          autoplay: false,
+          autoplaySpeed: 3000,
+          centerPadding: "0",
+        });
+      }
+    }
+
     function fixMenu() {
-      let sectionElement = document.getElementById("section-bio");
+      let sectionElement = document.getElementById("page-content");
       let menuElement = $(".menu-main");
 
       //menu-main--dark
