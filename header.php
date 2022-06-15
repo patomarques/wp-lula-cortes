@@ -11,21 +11,18 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700&display=swap" rel="stylesheet">
 
-	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
-	<!-- Add the slick-theme.css if you want default styling -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
-
 </head>
 
 <?php
-$navbar_scheme   = get_theme_mod('navbar_scheme', 'navbar-light bg-light');
-$navbar_position = get_theme_mod('navbar_position', 'static');
+  $navbar_scheme   = get_theme_mod('navbar_scheme', 'navbar-light bg-light');
+  $navbar_position = get_theme_mod('navbar_position', 'static');
 
-$search_enabled  = get_theme_mod('search_enabled', '1');
+  $search_enabled  = get_theme_mod('search_enabled', '1');
 ?>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 
 	<?php wp_body_open(); ?>
 
@@ -35,22 +32,24 @@ $search_enabled  = get_theme_mod('search_enabled', '1');
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-right">
-					<div class="button_container toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+					<div class="button_container toggle">
+            <span class="top"></span><span class="middle"></span><span class="bottom"></span>
+          </div>
 				</div>
 			</div>
 		</div>
 
 		<nav class="overlay-menu">
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'main-menu',
-					'container'      => '',
-					'menu_class'     => 'navbar-nav mr-auto',
-					'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
-					'walker'         => new WP_Bootstrap_Navwalker(),
-				)
-			);
+        wp_nav_menu(
+          array(
+            'theme_location' => 'main-menu',
+            'container'      => '',
+            'menu_class'     => 'navbar-nav mr-auto',
+            'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'         => new WP_Bootstrap_Navwalker(),
+          )
+        );
 			?>
 		</nav>
 	</div>
@@ -78,24 +77,28 @@ $search_enabled  = get_theme_mod('search_enabled', '1');
 														endif;
 														if (is_home() || is_front_page()) : echo ' home';
 														endif; ?>">
+
 			<div class="container">
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php _e('Toggle navigation', 'wp_lula_cortes'); ?>">
+				<button class="navbar-toggler" type="button"
+          data-toggle="collapse" data-target="#navbar"
+          aria-controls="navbar" aria-expanded="false"
+          aria-label="<?php _e('Toggle navigation', 'wp_lula_cortes'); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<div id="navbar" class="collapse navbar-collapse">
 					<?php
-					// Loading WordPress Custom Menu (theme_location).
-					wp_nav_menu(
-						array(
-							'theme_location' => 'main-menu',
-							'container'      => '',
-							'menu_class'     => 'navbar-nav mr-auto',
-							'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
-							'walker'         => new WP_Bootstrap_Navwalker(),
-						)
-					);
+            // Loading WordPress Custom Menu (theme_location).
+            wp_nav_menu(
+              array(
+                'theme_location' => 'main-menu',
+                'container'      => '',
+                'menu_class'     => 'navbar-nav mr-auto',
+                'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'         => new WP_Bootstrap_Navwalker(),
+              )
+            );
 
 					if ('1' === $search_enabled) :
 					?>

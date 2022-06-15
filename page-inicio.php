@@ -5,9 +5,9 @@
 <div class="content-sections mt-5">
 
     <?php
-    //get all posts
-    $args = array('post_type' => 'home-contents', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
-    $queryInfos = new WP_Query($args);
+      //get all posts
+      $args = array('post_type' => 'home-contents', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
+      $queryInfos = new WP_Query($args);
     ?>
 
     <?php while ($queryInfos->have_posts()) : $queryInfos->the_post(); ?>

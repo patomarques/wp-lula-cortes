@@ -126,7 +126,7 @@
   nav {
     position: relative;
     height: 50%;
-    top: 35%;
+    top: 250px;
     transform: translateY(-50%);
     font-size: 2.2rem;
     text-align: center;
@@ -224,7 +224,7 @@
 
   .list-nav {
     &__item {
-      position: relative;      
+      position: relative;
       margin-right: -5px !important;
 
       &:after {
@@ -258,7 +258,7 @@
       font-weight: 700;
       text-transform: uppercase;
 
-      
+
     }
   }
 }
