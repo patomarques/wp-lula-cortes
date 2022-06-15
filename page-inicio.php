@@ -25,7 +25,7 @@
                 $layoutClassRight = 'col-12 offset-md-2 col-md-6 text-center';
             } else if ($alignText == 'left') {
                 $layoutClassLeft = 'col-12 col-md-6';
-                $layoutClassRight = 'col-12 col-md-6 text-left';
+                $layoutClassRight = 'col-12 col-md-6 text-justify';
             } else {
                 $layoutClassLeft = 'col-12 col-md-6 order-1 order-md-1 text-right';
                 $layoutClassRight = 'col-12 col-md-6 order-2 order-md-2';

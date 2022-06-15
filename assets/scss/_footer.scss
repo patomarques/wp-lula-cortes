@@ -6,12 +6,13 @@
   }
 
   &__link {
-    font-size: 3rem;    
+    font-size: 3rem;
     @include font-size(40px);
     @include transition(color 0.7s ease);
+    text-decoration:  none !important;
 
     &:hover {
-      opacity: 0.7;      
+      opacity: 0.7;
     }
 
     i{

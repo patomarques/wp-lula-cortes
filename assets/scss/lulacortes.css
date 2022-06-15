@@ -303,7 +303,7 @@ p {
 
 .btn-custom {
   display: inline-block;
-  width: 12vw;
+  width: 18vw;
   margin: 0 auto;
 }
 
@@ -592,6 +592,7 @@ p {
   -ms-transition: color 0.7s ease;
   -o-transition: color 0.7s ease;
   transition: color 0.7s ease;
+  text-decoration: none !important;
 }
 
 .social-icons__link:hover {

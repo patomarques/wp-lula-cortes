@@ -10,8 +10,8 @@
  * @package Bootscore
  */
 
-    $args = array('post_type' => 'contato', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
-    $queryContact = new WP_Query($args);
+    $args = array('post_type' => 'contatos', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
+    $queryContacts = new WP_Query($args);
 ?>
 
 <footer class="container-full bg-black mt-5 pt-5">
@@ -27,32 +27,20 @@
                     <img src="https://lulacortes.com/wp-content/uploads/2021/06/contatos.png" alt="Contatos" title="Contatos">
                 </h2>
 
-                <ul class="social-icons list-unstyled text-center">
+                <ul class="social-icons list-unstyled text-center pb-5">
+
+                  <?php while ($queryContacts->have_posts()) : $queryContacts->the_post(); ?>
                     <li class="social-icons__item d-inline">
-                        <a href="https://www.facebook.com/redelulacortex/" target="_black" rel="noopener" class="social-icons__link social-icons__link--actived">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="<?= get_the_content() ?>" class="social-icons__link" target="_black" rel="noopener" title="<?= get_the_title() ?>">
+                            <i class="<?= get_post_field('icon-class') ?>"></i>
                         </a>
                     </li>
-                    <li class="social-icons__item d-inline">
-                        <a href="https://www.instagram.com/redelulacortex/" class="social-icons__link" target="_black" rel="noopener">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="social-icons__item d-inline">
-                        <a href="https://www.youtube.com/channel/UCUOBZT_GjSklL8yigoEZ_hg" class="social-icons__link" target="_black" rel="noopener">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                    <li class="social-icons__item d-inline">
-                        <a href="mailto:redelulacortex@gmail.com" target="_blank" class="social-icons__link" target="_black" rel="noopener">
-                            <i class="far fa-envelope"></i>
-                        </a>
-                    </li>
-                    <li class="social-icons__item hidden">
-                        <a href="tel:5581997274146" class="social-icons__link" alt="(81) 9 9727-4146">
-                            <i class="fas fa-mobile-alt"></i>
-                        </a>
-                    </li>
+
+                  <?php
+                    endwhile;
+                    wp_reset_postdata();
+                  ?>
+
                 </ul>
 
                 <div class="bootscore-info text-muted text-center mt-5 mb-4">
@@ -69,7 +57,7 @@
 </footer>
 
 </div>
-    
+
 <?php wp_footer(); ?>
 
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
