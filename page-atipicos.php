@@ -3,21 +3,6 @@
 global $post;
 $post_slug = $post->post_name;
 
-$argsQuadros = array('post_type' => 'quadros', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
-$queryQuadros = new WP_Query($argsQuadros);
-
-$argsGravuras = array('post_type' => 'gravuras', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
-$queryGravuras = new WP_Query($argsGravuras);
-
-$argsEsbocos = array('post_type' => 'esbocos', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
-$queryEsbocos = new WP_Query($argsEsbocos);
-
-$argsMemoriaGrafica = array('post_type' => 'memoria-grafica', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
-$queryMemoriaGrafica = new WP_Query($argsMemoriaGrafica);
-
-$argsTeam = array('post_type' => 'equipe', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
-$queryTeam = new WP_Query($argsTeam);
-
 ?>
 
 <section class="container-full page-music list-content mt-5 pt-5 mb-5">
@@ -30,363 +15,36 @@ $queryTeam = new WP_Query($argsTeam);
 	</div>
 </section>
 
-<section id="section-nav-category" class="container-full mb-5">
-	<div class="container breadcrumbs-nav">
-		<div class="row">
-			<div class="col-12">
-				<ul class="list-nav list-inline">
-					<li class="list-nav__item list-nav__item-actived list-inline-item">
-						<a href="javascript:void(0)" class="list-nav__link">
-							Quadros
-						</a>
-					</li>
-					<li class="list-nav__item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav__link">
-							Gravuras
-						</a>
-					</li>
-					<li class="list-nav__item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav__link">
-							Esboços
-						</a>
-					</li>
-					<li class="list-nav__item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav__link">
-							Memória Gráfica
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<section id="page-content" class="container mt-3 mb-5">
+  <div class="row">
+    <div class="col-12 text-justify">
+      <p><?php the_content(); ?></p>
+    </div>
+  </div>
 </section>
 
-<section class="container-full content-slick-squares mb-5" data-type="quadros">
-	<div class="slick-squares">
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Quadro Title</p>
-					<p class="slick-squares__subtitle">2000</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Quadro Title</p>
-					<p class="slick-squares__subtitle">2000</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Quadro Title</p>
-					<p class="slick-squares__subtitle">2000</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Quadro Title</p>
-					<p class="slick-squares__subtitle">2000</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Quadro Title</p>
-					<p class="slick-squares__subtitle">2000</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Quadro Album</p>
-					<p class="slick-squares__subtitle">2000</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-	</div>
+<?php get_template_part('template-part/team-members'); ?>
+
+<?php get_template_part('template-part/atipicos-galeria'); ?>
+
+<section id="section-" class="container section-content">
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="subtitle-section">Mergulhos</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <p>A curadoria dessa exposição virtual pretende apresentar ao público parte da série de pinturas intitulada Atípicos, de autoria de Lula Cortês, que está contida em acervo particulares – uma rede de amigos, sustentada por amores, paixões e muita amizade – que foi acionada por meio da realização de uma investigação que derivou em uma série de atividades, ações e sobretudo uma pesquisa a acerca da produção plástica do artista multidisciplinar Lula Cortês. [...]
+      </p>
+      <a class="btn btn-dark" href="https://docs.google.com/document/d/1r1DF8wcvcnxGIdZna6uzOTNw6UoCZ4HioIc6YJ-GV9g/edit?usp=sharing">
+        Ver mais
+      </a>
+    </div>
+  </div>
 </section>
 
-<section class="container-full content-slick-squares mb-5" data-type="gravuras">
-	<div class="slick-squares">
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Gravuras Title</p>
-					<p class="slick-squares__subtitle">1991</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Gravuras Title</p>
-					<p class="slick-squares__subtitle">1991</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Gravuras Title</p>
-					<p class="slick-squares__subtitle">1991</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Gravuras Title</p>
-					<p class="slick-squares__subtitle">1991</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Gravuras Title</p>
-					<p class="slick-squares__subtitle">1991</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Gravuras Title</p>
-					<p class="slick-squares__subtitle">1991</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-	</div>
-</section>
-
-<section class="container-full content-slick-squares mb-5" data-type="esbocos">
-	<div class="slick-squares">
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Esboços Title</p>
-					<p class="slick-squares__subtitle">1989</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Esboços Title</p>
-					<p class="slick-squares__subtitle">1989</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Esboços Title</p>
-					<p class="slick-squares__subtitle">1989</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Esboços Title</p>
-					<p class="slick-squares__subtitle">1989</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Esboços Title</p>
-					<p class="slick-squares__subtitle">1989</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Esboços Title</p>
-					<p class="slick-squares__subtitle">1989</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-	</div>
-</section>
-
-<section class="container-full content-slick-squares mb-5" dat-type="memoria-grafica">
-	<div class="slick-squares">
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Memória Gráfica Title</p>
-					<p class="slick-squares__subtitle">1993</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Memória Gráfica Title</p>
-					<p class="slick-squares__subtitle">1993</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Memória Gráfica Title</p>
-					<p class="slick-squares__subtitle">1993</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Memória Gráfica Title</p>
-					<p class="slick-squares__subtitle">1993</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Memória Gráfica Title</p>
-					<p class="slick-squares__subtitle">1993</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-		<div class="slick-squares__item">
-			<div class="slick-squares__item__text">
-				<a href="/" class="slick-squares__link">
-					<p class="slick-squares__title">Memória Gráfica Title</p>
-					<p class="slick-squares__subtitle">1993</p>
-				</a>
-			</div>
-			<a href="/" class="slick-squares__box-image slick-squares__link" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-				<div class="slick-squares__box-image__spacer"></div>
-			</a>
-		</div>
-	</div>
-</section>
-
-<section id="page-atipicos-equipe" class="container-fluid mt-5">
-	<div class="container mb-4">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="title-section">Equipe</h2>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="section-team" class="container">
-	<div class="row">
-		<div class="col-12 multiple-items">
-
-			<?php while ($queryTeam->have_posts()) : $queryTeam->the_post(); ?>
-
-				<?php
-				$profileThumbs = get_the_post_thumbnail_url();
-
-				if ($profileThumbs == '') {
-					$profileThumbs = get_stylesheet_directory_uri() . '/assets/img/favicon/android-icon-96x96.png';
-				}
-				?>
-
-				<div class="items text-center">
-					<div class="card-team">
-						<div class="card-thumbnail rounded-circle mb-3">
-							<img src="<?= $profileThumbs ?>" alt="<?= get_the_title() ?>" class="img-responsive mx-auto d-block">
-						</div>
-						<h5 class="card-title"><?= get_the_title() ?></h5>
-						<h6 class="card-subtitle"><?= get_post_field('Função') ?></h6>
-					</div>
-				</div>
-
-			<?php
-			endwhile;
-			wp_reset_postdata();
-			?>
-
-		</div>
-	</div>
-</section>
+<?php get_template_part('template-part/webnarios'); ?>
 
 <script>
 	jQuery(document).ready(function() {
@@ -394,5 +52,4 @@ $queryTeam = new WP_Query($argsTeam);
 	});
 </script>
 
-<?php
-get_footer(); ?>
+<?php get_footer(); ?>

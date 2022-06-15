@@ -2,7 +2,7 @@
 
 <?php get_template_part('template-part/banner-simple'); ?>
 
-<div class="content-sections mt-5">
+<div id="page-content" class="content-sections mt-5">
 
     <?php
       //get all posts
@@ -22,7 +22,7 @@
             $alignText = get_post_field('Alinhamento Texto');
 
             if ($alignText == 'center') {
-                $layoutClassRight = 'col-12 offset-md-2 col-md-6 text-center';
+                $layoutClassRight = 'col-12 offset-md-2 col-md-8 text-center';
             } else if ($alignText == 'left') {
                 $layoutClassLeft = 'col-12 col-md-6';
                 $layoutClassRight = 'col-12 col-md-6 text-justify';

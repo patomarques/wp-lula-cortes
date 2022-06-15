@@ -15,7 +15,7 @@
 ?>
 
 <footer class="container-full bg-black mt-5 pt-5">
-    <div class="container">
+    <div class="container mt-5 pt-5">
         <div class="row mt-5">
             <div class="col-12 text-center">
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/title-png/contatos.png' ?>" alt="" class="img-reverse">

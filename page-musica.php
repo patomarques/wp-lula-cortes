@@ -3,7 +3,6 @@
 $args = array('post_type' => 'musicas', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
 $queryMusicas = new WP_Query($args);
 
-//print_r($queryMusicas);
 ?>
 
 <section class="container-full page-music list-content mt-5 pt-5">
@@ -42,15 +41,18 @@ $queryMusicas = new WP_Query($args);
 			<div class="row pt-3 pb-3">
 				<div class="col-12 col-md-6">
 					<div class="square">
-						<div class="content" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
-
-						</div>
+						<a href="<?= get_permalink() ?>" class="content" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)" title="<?= get_the_title()?>" alt="Imagem: <?= get_the_title()?>">
+            </a>
 					</div>
 				</div>
 				<div class="col-12 col-md-6">
 					<div class="content-info p-4">
-						<h2 class="title-album mb-3"><?php echo get_the_title(); ?></h2>
+						<a href="<?= get_permalink() ?>" class="title-album mb-3"><?php echo get_the_title(); ?></a>
             <p class="text-justify"><?php echo wp_trim_words( get_the_content(), 80, '...' ); ?></p>
+
+            <a href="/" class="btn btn-dark btn-custom mt-3" type="button">
+              <?= 'Continue lendo e ouça...' ?>
+            </a>
 					</div>
 				</div>
 			</div>
@@ -68,5 +70,4 @@ $queryMusicas = new WP_Query($args);
 	});
 </script>
 
-<?php
-get_footer(); ?>
+<?php get_footer(); ?>
