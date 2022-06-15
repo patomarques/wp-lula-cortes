@@ -35,6 +35,18 @@
   font-size: 1.2rem;
 }
 
+.title-album {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.subtitle-section {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -48,7 +60,8 @@ body {
 }
 
 a {
-  color: #000000;
+  color: #000000 !important;
+  text-decoration: none !important;
 }
 
 a:hover {
@@ -74,6 +87,10 @@ p {
 .btn-main:hover {
   background-color: #000000;
   color: #ffffff;
+}
+
+.btn-dark {
+  color: #ffffff !important;
 }
 
 .bold {
@@ -270,6 +287,10 @@ p {
   height: 0;
 }
 
+.slick-squares__title {
+  min-height: 100px;
+}
+
 .slick-squares__title, .slick-squares__subtitle {
   margin-bottom: 0;
 }
@@ -305,6 +326,16 @@ p {
   display: inline-block;
   width: 18vw;
   margin: 0 auto;
+}
+
+.section-content {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.list-nav__link {
+  text-decoration: none !important;
+  color: #000000 !important;
 }
 
 @media (min-width: 320px) {

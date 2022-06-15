@@ -12,7 +12,7 @@
         slidesToShow: 5,
         slidesToScroll: 2,
         dots: true,
-        speed: 400,
+        speed: 2000,
         autoplay: true,
         autoplaySpeed: 500,
         responsive: [
@@ -44,37 +44,83 @@
     }
 
     function loadSlickSquares() {
-      let element = $(".slick-squares");
+      let slickGaleria = $('#slick-galeria');
+      let slickWebnarios = $('#slick-webnarios');
 
-      if (element != undefined && element.lenght > 0) {
-        element.slick({
-          slidesToShow: 4,
-          dots: true,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1
-              },
-            },
-            {
-              breakpoint: 678,
-              settings: {
-                slidesToShow: 2.2,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 320,
-              settings: {
-                slidesToShow: 1.1,
-                slidesToScroll: 1,
-              },
-            },
-          ]
-        });
+      let slickQuadros = $('#slick-quadros');
+      let slickGravuras = $('#slick-gravuras');
+      let slickEsbocos = $('#slick-esbocos');
+      let slickMemoriaGrafica = $('#slick-memoria-grafica');
+
+      let slickVideos = $('#slick-videos');
+
+      let slickLivros = $('#slick-livros');
+      //let slickVideos = $('#slick-videos');
+      //let slickVideos = $('#slick-videos');
+      //let slickVideos = $('#slick-videos');
+
+      if(slickGaleria.length > 0){
+        createSlickSquares(slickGaleria);
       }
+
+      if(slickWebnarios.length > 0){
+        createSlickSquares(slickWebnarios);
+      }
+
+      if(slickQuadros.length > 0){
+        createSlickSquares(slickQuadros);
+      }
+
+      if(slickGravuras.length > 0){
+        createSlickSquares(slickGravuras);
+      }
+
+      if(slickEsbocos.length > 0){
+        createSlickSquares(slickEsbocos);
+      }
+
+      if(slickMemoriaGrafica.length > 0){
+        createSlickSquares(slickMemoriaGrafica);
+      }
+
+      if(slickVideos.length > 0){
+        createSlickSquares(slickVideos);
+      }
+
+      if(slickLivros.length > 0){
+        createSlickSquares(slickLivros);
+      }
+    }
+
+    function createSlickSquares(element) {
+      element.slick({
+        slidesToShow: 4,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1
+            },
+          },
+          {
+            breakpoint: 678,
+            settings: {
+              slidesToShow: 2.2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 320,
+            settings: {
+              slidesToShow: 1.1,
+              slidesToScroll: 1,
+            },
+          },
+        ]
+      });
+
     }
 
     function setSlickImages() {
@@ -145,29 +191,42 @@
     }
 
     function fixMenu() {
-      let sectionElement = document.getElementById("page-content");
-      let menuElement = $(".menu-main");
-
+      console.log('ta chamando');
       //menu-main--dark
       //console.log('menu effect ', sectionElement.scrollTop);
     }
 
-    $window.on("scroll resize", isOnView);
+    window.addEventListener('scroll', (event) => {
+      console.log('Scrolling...');
+    });
 
-    $window.on("scroll resize", fixMenu);
+    window.onscroll = function(event) {
+      console.log('Scrolling 222...');
+    };
 
-    let headerImage = document.getElementsByClassName("header-image");
+    let menuElement = $(".menu-main");
+    let nextSectionContent = document.getElementById("page-content");
 
-    if (headerImage.length > 0) {
-      let elementHeight = headerImage[0].offsetHeight;
+    console.log('nextSectionContent', nextSectionContent);
+
+    if (nextSectionContent != null) {
+      let elementHeight = nextSectionContent.offsetHeight;
+
+      console.log('elementHeight', elementHeight);
 
       $(window).scroll(function () {
+        console.log('scroll', elementHeight);
         if ($(document).scrollTop() > elementHeight) {
-          $(".menu-main").addClass("shrink menu-main--dark");
+          menuElement.addClass("shrink menu-main--dark");
         } else {
-          $(".menu-main").removeClass("shrink menu-main--dark");
+          menuElement.removeClass("shrink menu-main--dark");
         }
       });
     }
+
+    $window.on("scroll resize", isOnView);
+
+    $window.on("scroll", fixMenu);
+
   });
 })(jQuery);
