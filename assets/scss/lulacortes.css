@@ -287,10 +287,6 @@ p {
   height: 0;
 }
 
-.slick-squares__title {
-  min-height: 100px;
-}
-
 .slick-squares__title, .slick-squares__subtitle {
   margin-bottom: 0;
 }

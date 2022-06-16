@@ -55,9 +55,8 @@
       let slickVideos = $('#slick-videos');
 
       let slickLivros = $('#slick-livros');
-      //let slickVideos = $('#slick-videos');
-      //let slickVideos = $('#slick-videos');
-      //let slickVideos = $('#slick-videos');
+      let slickZines = $('#slick-zines');
+      let slickAudiobooks = $('#slick-audiobooks');
 
       if(slickGaleria.length > 0){
         createSlickSquares(slickGaleria);
@@ -89,6 +88,10 @@
 
       if(slickLivros.length > 0){
         createSlickSquares(slickLivros);
+      }
+
+      if(slickZines.length > 0){
+        createSlickSquares(slickZines);
       }
     }
 
