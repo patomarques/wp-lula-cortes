@@ -11,7 +11,8 @@ body {
 }
 
 a {
-  color: $color-black;
+  color: $color-black !important;
+  text-decoration: none !important;
 
   @extend .trans;
 
@@ -21,7 +22,7 @@ a {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .hidden {
@@ -41,6 +42,10 @@ p {
     background-color: $btn-main-bg-hover;
     color: $btn-main-color-hover;
   }
+}
+
+.btn-dark {
+  color: $color-white !important;
 }
 
 .bold {
@@ -250,7 +255,7 @@ p {
       background-color: $color-white;
       color: $color-black;
       padding-left: 15px;
-      margin-bottom: 10px;      
+      margin-bottom: 10px;
     }
 
     &:after {
@@ -263,6 +268,9 @@ p {
     }
   }
 
+  &__title{
+    //min-height: 100px;
+  }
   &__title,
   &__subtitle {
     margin-bottom: 0;
@@ -277,7 +285,7 @@ p {
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;    
+    background-size: cover;
 
     &__spacer {
       width: 100%;
@@ -305,6 +313,22 @@ p {
 .content-slick-squares {
   width: 100%;
   position: relative;
+}
+
+.btn-custom {
+  display: inline-block;
+  width: 18vw;
+  margin: 0 auto;
+}
+
+.section-content {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.list-nav__link {
+  text-decoration: none !important;
+  color: $color-black !important;
 }
 
 @media (min-width: 320px) {

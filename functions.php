@@ -27,7 +27,7 @@ function create_custom_post_type()
         'capability_type' => 'post',
         'hierarchical' => false,
         'menu_position' => null,
-        'supports' => array('title', 'editor', 'author', 'excerpt', 'page-attributes')        
+        'supports' => array('title', 'editor', 'author', 'excerpt', 'page-attributes')
     );
 
     $args['labels'] = array(
@@ -69,7 +69,8 @@ function create_custom_post_type()
             'public' => true,
             'has_archive' => true,
             //'show_in_rest' => true,
-            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'), //'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'
+            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            //'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'
             //'menu_position'       => 1,
             'exclude_from_search' => true
         )
@@ -315,7 +316,7 @@ function create_custom_post_type()
             'exclude_from_search' => true
         )
     );
-   
+
 }
 
 // Hooking up our function to theme setup
