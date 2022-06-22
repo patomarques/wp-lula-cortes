@@ -1,7 +1,5 @@
 (function ($) {
   $(document).ready(function () {
-    console.log('slick js custom was load');
-
     //loadBannerSliders();
     loadSlickTeam();
     loadSlickSquares();

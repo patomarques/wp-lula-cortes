@@ -38,13 +38,7 @@
       //console.log('menu effect ', sectionElement.scrollTop);
     }
 
-    window.addEventListener('scroll', (event) => {
-      console.log('Scrolling...');
-    });
 
-    window.onscroll = function (event) {
-      console.log('Scrolling 222...');
-    };
 
     let menuElement = $(".menu-main");
     let nextSectionContent = document.getElementById("page-content");
