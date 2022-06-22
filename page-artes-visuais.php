@@ -53,7 +53,6 @@ get_header();
 
 <?php get_template_part('template-part/memoria-grafica'); ?>
 
-
 <script>
 	jQuery(document).ready(function() {
 		jQuery('.menu-main').addClass('shrink menu-main--dark');
