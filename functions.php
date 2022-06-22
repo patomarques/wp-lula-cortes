@@ -4,6 +4,8 @@ function add_theme_scripts()
 {
     wp_enqueue_style('lulacortes-css', get_theme_file_uri() . '/assets/scss/lulacortes.css');
     wp_enqueue_script('lulacortes-js', get_theme_file_uri() . '/assets/js/lulacortes.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('slick-js', get_theme_file_uri() . '/assets/js/slick-custom.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('header-ux-js', get_theme_file_uri() . '/assets/js/header-ux.js', array('jquery'), '1.0', true);
 }
 
 function hide_admin_bar()
