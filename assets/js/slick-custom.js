@@ -7,54 +7,22 @@
     loadSlickSquares();
 
     function loadSlickSquares() {
-      let slickGaleria = $('#slick-galeria');
-      let slickWebnarios = $('#slick-webnarios');
+      const elementIDS = [
+        '#slick-galeria',
+        '#slick-webnarios',
+        '#slick-quadros',
+        '#slick-gravuras',
+        '#slick-esbocos',
+        '#slick-memoria-grafica',
+        '#slick-videos',
+        '#slick-livros',
+        '#slick-zines',
+        '#slick-audiobooks'];
 
-      let slickQuadros = $('#slick-quadros');
-      let slickGravuras = $('#slick-gravuras');
-      let slickEsbocos = $('#slick-esbocos');
-      let slickMemoriaGrafica = $('#slick-memoria-grafica');
-
-      let slickVideos = $('#slick-videos');
-
-      let slickLivros = $('#slick-livros');
-      let slickZines = $('#slick-zines');
-      let slickAudiobooks = $('#slick-audiobooks');
-
-      if (slickGaleria.length > 0) {
-        createSlickSquares(slickGaleria);
-      }
-
-      if (slickWebnarios.length > 0) {
-        createSlickSquares(slickWebnarios);
-      }
-
-      if (slickQuadros.length > 0) {
-        createSlickSquares(slickQuadros);
-      }
-
-      if (slickGravuras.length > 0) {
-        createSlickSquares(slickGravuras);
-      }
-
-      if (slickEsbocos.length > 0) {
-        createSlickSquares(slickEsbocos);
-      }
-
-      if (slickMemoriaGrafica.length > 0) {
-        createSlickSquares(slickMemoriaGrafica);
-      }
-
-      if (slickVideos.length > 0) {
-        createSlickSquares(slickVideos);
-      }
-
-      if (slickLivros.length > 0) {
-        createSlickSquares(slickLivros);
-      }
-
-      if (slickZines.length > 0) {
-        createSlickSquares(slickZines);
+      for(let counter = 0; counter < elementIDS.length; counter++) {
+        if ($(elementIDS[counter]).length > 0) {
+          createSlickSquares($(elementIDS[counter]));
+        }
       }
     }
 
