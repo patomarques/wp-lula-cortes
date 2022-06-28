@@ -12,8 +12,8 @@ function hide_admin_bar()
 {
     return false;
 }
-add_filter('show_admin_bar', 'hide_admin_bar');
 
+add_filter('show_admin_bar', 'hide_admin_bar');
 add_filter('show_admin_bar', '__return_false');
 
 function create_custom_post_type()
@@ -36,6 +36,7 @@ function create_custom_post_type()
         'name' => __('Banner Sliders'),
         'singular_name' => __('Banner Slider')
     );
+
     $args['menu_icon'] = 'dashicons-format-gallery';
 
     register_post_type(
@@ -144,11 +145,20 @@ function create_custom_post_type()
                 'name' => __('Músicas'),
                 'singular_name' => __('Música')
             ),
+            'pages' => 'musicas',
             'public' => true,
-            'has_archive' => true,
-            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            'has_archive' => false,
+            'rewrite' => array(
+                'slug' => 'musicas',
+                'with_front' => true,
+                'hierarchical' => true
+            ),
+            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields', 'page-attributes'),
             'menu_icon' => 'dashicons-format-audio',
-            'exclude_from_search' => true
+            'exclude_from_search' => true,
+            'taxonomies' => array('musicas'),
+            'query_var' => 'musicas'
+
         )
     );
 
@@ -314,13 +324,35 @@ function create_custom_post_type()
             'public' => true,
             'has_archive' => true,
             'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
-
             'exclude_from_search' => true
         )
     );
 
 }
 
+function register_custom_taxonomies() {
+  $rewrite = array(
+      'slug'                       => 'musicas',
+      'with_front'                 => true,
+      'hierarchical'               => true
+  );
+
+  $args = array(
+    'hierarchical'               => true,
+    'public'                     => true,
+    'show_ui'                    => true,
+    'show_admin_column'          => true,
+    'show_in_nav_menus'          => true,
+    'show_tagcloud'              => true,
+    'query_var'                  => 'musicas',
+    'rewrite'                    => $rewrite
+  );
+
+  register_taxonomy('musicas', 'special_media_post', $args);
+}
+
 // Hooking up our function to theme setup
-add_action('init', 'create_custom_post_type');
+add_action('init', 'create_custom_post_type', 0);
+add_action( 'init', 'register_custom_taxonomies', 0 );
+
 add_action('wp_enqueue_scripts', 'add_theme_scripts');
