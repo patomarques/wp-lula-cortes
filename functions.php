@@ -153,7 +153,7 @@ function create_custom_post_type()
                 'with_front' => true,
                 'hierarchical' => true
             ),
-            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields', 'page-attributes'),
+            'supports' => array('title', 'author', 'editor', 'excerpt', 'thumbnail', 'custom-fields', 'page-attributes'),
             'menu_icon' => 'dashicons-format-audio',
             'exclude_from_search' => true,
             'taxonomies' => array('musicas'),

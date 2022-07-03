@@ -69,7 +69,7 @@ a:hover {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .hidden {
@@ -332,6 +332,28 @@ p {
 .list-nav__link {
   text-decoration: none !important;
   color: #000000 !important;
+}
+
+.breadcrumbs__item {
+  padding-right: 10px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 320px) {

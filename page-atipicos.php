@@ -23,11 +23,9 @@ $post_slug = $post->post_name;
   </div>
 </section>
 
-<?php get_template_part('template-part/team-members'); ?>
-
 <?php get_template_part('template-part/atipicos-galeria'); ?>
 
-<section id="section-" class="container section-content">
+<section id="section-mergulhos" class="container section-content">
   <div class="row mt-5">
     <div class="col-12">
       <h3 class="subtitle-section">Mergulhos</h3>
@@ -46,10 +44,6 @@ $post_slug = $post->post_name;
 
 <?php get_template_part('template-part/webnarios'); ?>
 
-<script>
-	jQuery(document).ready(function() {
-		jQuery('.menu-main').addClass('shrink menu-main--dark');
-	});
-</script>
+<?php get_template_part('template-part/team-members'); ?>
 
 <?php get_footer(); ?>

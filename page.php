@@ -18,7 +18,7 @@ $query = new WP_Query($args);
 				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/' . $post_slug .'.png' ?>" alt="<?= get_the_title() ?>" class="mx-auto d-block">
 			</div>
 		</div>
-		
+
 	</div>
 	<div class="container">
 
@@ -35,12 +35,6 @@ $query = new WP_Query($args);
 		?>
 	</div>
 </section>
-
-<script>
-	jQuery(document).ready(function() {
-		jQuery('.menu-main').addClass('shrink menu-main--dark');
-	});
-</script>
 
 <?php
 get_footer(); ?>

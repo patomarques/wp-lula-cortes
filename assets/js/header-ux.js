@@ -19,5 +19,7 @@
       console.log('Scrolling 222...');
     };
 
+    $('.menu-main').addClass('shrink menu-main--dark');
+
   });
 })(jQuery);
