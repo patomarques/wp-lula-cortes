@@ -229,11 +229,19 @@ function create_custom_post_type()
                 'name' => __('Vídeos'),
                 'singular_name' => __('Vídeo')
             ),
+            //'pages' => 'videos',
             'public' => true,
-            'has_archive' => true,
-            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            'has_archive' => false,
+            'supports' => array('title', 'author', 'editor', 'excerpt', 'thumbnail', 'custom-fields', 'page-attributes'),
             'menu_icon' => 'dashicons-format-video',
-            'exclude_from_search' => true
+            'exclude_from_search' => true,
+            'taxonomies' => array('videos'),
+            'query_var' => 'videos',
+            'rewrite' => array(
+              'slug' => 'videos',
+              'with_front' => true,
+              'hierarchical' => false
+          )
         )
     );
 
@@ -331,24 +339,31 @@ function create_custom_post_type()
 }
 
 function register_custom_taxonomies() {
-  $rewrite = array(
-      'slug'                       => 'musicas',
+  $slugs = ['musicas', 'videos'];
+
+  for($index; $index < count($slugs); $index++) {
+
+    $rewrite = array(
+      'slug'                       => $slugs[$index],
       'with_front'                 => true,
       'hierarchical'               => true
-  );
+    );
 
-  $args = array(
-    'hierarchical'               => true,
-    'public'                     => true,
-    'show_ui'                    => true,
-    'show_admin_column'          => true,
-    'show_in_nav_menus'          => true,
-    'show_tagcloud'              => true,
-    'query_var'                  => 'musicas',
-    'rewrite'                    => $rewrite
-  );
+    $args = array(
+      'hierarchical'               => true,
+      'public'                     => true,
+      'show_ui'                    => true,
+      'show_admin_column'          => true,
+      'show_in_nav_menus'          => true,
+      'show_tagcloud'              => true,
+      'query_var'                  => $slugs[$index],
+      'rewrite'                    => $rewrite
+    );
 
-  register_taxonomy('musicas', 'special_media_post', $args);
+    register_taxonomy($slugs[$index], 'special_media_post', $args);
+
+  }
+
 }
 
 // Hooking up our function to theme setup

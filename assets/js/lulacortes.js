@@ -38,8 +38,6 @@
       //console.log('menu effect ', sectionElement.scrollTop);
     }
 
-
-
     let menuElement = $(".menu-main");
     let nextSectionContent = document.getElementById("page-content");
 
@@ -64,5 +62,15 @@
 
     $window.on("scroll", fixMenu);
 
+    $('.slick-squares__link').on('click', function(){
+      let videoUrl = $(this).data('video-url');
+
+      // if(videoUrl == ''){
+      //   $('#modal-webnarios').modal('close');
+      //   return;
+      // }
+
+      $('#modal-webnarios iframe').attr('src', videoUrl);
+    });
   });
 })(jQuery);

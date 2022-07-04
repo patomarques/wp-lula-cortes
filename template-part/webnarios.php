@@ -3,7 +3,7 @@
   $queryWebnarios = new WP_Query($argsWebnarios);
 ?>
 
-<section id="section-" class="container-full section-content">
+<section id="section-webnarios" class="container-full section-content">
   <div class="container">
     <div class="row mt-5 pt-5">
       <div class="col-12">
@@ -26,15 +26,19 @@
 
       <div class="slick-squares__item">
         <div class="slick-squares__item__text">
-          <a href="/" class="slick-squares__link">
+          <a href="javascript:void(0)" role="button" class="slick-squares__link"
+          data-toggle="modal" data-target="#modal-webnarios"
+          data-video-url="<?= get_the_content() ?>">
             <p class="slick-squares__title"><?= get_the_title() ?></p>
             <!-- <p class="slick-squares__subtitle">2000</p> -->
           </a>
         </div>
-        <a href="<?= get_the_content() ?>"
-          target="_black" rel="noopener" title="<?= get_the_title() ?>"
+        <a href="javascript:void(0)"
+          rel="noopener" title="<?= get_the_title() ?>"
           class="slick-squares__box-image slick-squares__link"
-          style="background-image: url(<?=  $thumbs ?>)">
+          data-toggle="modal" data-target="#modal-webnarios"
+          style="background-image: url(<?=  $thumbs ?>)"
+          data-video-url="<?= get_the_content() ?>">
           <div class="slick-squares__box-image__spacer"></div>
         </a>
       </div>
@@ -47,3 +51,26 @@
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-webnarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title hidden" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="video-container">
+          <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer hidden">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,4 @@
 <?php
-/*
-Template Name: videos
-*/
-
 get_header();
 
 global $post;
@@ -14,14 +10,9 @@ $queryVideos = new WP_Query($argsVideos);
 ?>
 
 <section id="page-content" class="container content-sections">
-  <div class="row pt-5 mb-5">
+  <div class="row mt-5 mb-5">
     <div class="col-12 mt-5">
-    <img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/' . $post_slug . '.png' ?>" alt="<?= get_the_title() ?>" class="mx-auto d-block">
-    </div>
-  </div>
-  <div class="row mt-3 mb-5">
-    <div class="col-12 text-justify">
-      <p><?php the_content(); ?></p>
+      <img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/videos.png' ?>" alt="Vídeos" class="mx-auto d-block">
     </div>
   </div>
 </section>
@@ -43,7 +34,6 @@ $queryVideos = new WP_Query($argsVideos);
         <div class="slick-squares__item__text">
           <a href="<?= get_post_field('youtube-link') ?>" class="slick-squares__link">
             <p class="slick-squares__title"><?= get_the_title() ?></p>
-            <!-- <p class="slick-squares__subtitle">2000</p> -->
           </a>
         </div>
         <a href="<?= get_post_field('youtube-link') ?>"
