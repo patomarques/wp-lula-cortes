@@ -72,5 +72,10 @@
 
       $('#modal-webnarios iframe').attr('src', videoUrl);
     });
+
+    $('.slick-videos .slick-squares__link').on('click', function() {
+      let videoUrl = $(this).data('video-url');
+      $('#modal-videos iframe').attr('src', videoUrl);
+    });
   });
 })(jQuery);
