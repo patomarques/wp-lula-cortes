@@ -64,12 +64,6 @@
 
     $('.slick-squares__link').on('click', function(){
       let videoUrl = $(this).data('video-url');
-
-      // if(videoUrl == ''){
-      //   $('#modal-webnarios').modal('close');
-      //   return;
-      // }
-
       $('#modal-webnarios iframe').attr('src', videoUrl);
     });
 

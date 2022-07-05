@@ -5,12 +5,10 @@ $post_slug = $post->post_name;
 
 ?>
 
-
-
 <section class="container-full page-music list-content mt-5 pt-5 mb-5">
 	<div class="container">
 		<div class="row mt-5 mb-5">
-			<div class="col-12 text-center mt-3">
+			<div class="col-12 text-center mt-4">
 				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/' . $post_slug . '.png' ?>" alt="<?= get_the_title() ?>" class="mx-auto d-block">
 			</div>
 		</div>
@@ -53,7 +51,7 @@ $post_slug = $post->post_name;
   </div>
 </section>
 
-<section id="page-content" class="container mt-6 mb-5">
+<section id="page-content" class="container mt-5 mb-5">
   <div class="row">
     <div class="col-12 text-left">
       <p><?php the_content(); ?></p>
