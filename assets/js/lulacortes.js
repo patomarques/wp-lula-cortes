@@ -62,14 +62,37 @@
 
     $window.on("scroll", fixMenu);
 
-    $('.slick-squares__link').on('click', function(){
+    $('.slick-squares__link').on('click', function () {
       let videoUrl = $(this).data('video-url');
       $('#modal-webnarios iframe').attr('src', videoUrl);
     });
 
-    $('.slick-videos .slick-squares__link').on('click', function() {
+    $('.slick-videos .slick-squares__link').on('click', function () {
       let videoUrl = $(this).data('video-url');
       $('#modal-videos iframe').attr('src', videoUrl);
     });
+
+    function navSectionScroll() {
+      let nav = $('#section-nav');
+      let menuMain = $('.menu-main');
+      let nav_height = nav.outerHeight();
+
+      nav.find('a').on('click', function () {
+        let $el = $(this);
+        let id = $el.attr('href');
+
+        $('html, body').animate({
+          scrollTop: $(id).offset().top - nav_height
+        }, 500);
+
+        return false;
+      });
+    }
+
+    $(window).on('scroll', function () {
+      console.log('scrollando;;;', $(this).scrollTop());
+    });
+
+    navSectionScroll();
   });
 })(jQuery);

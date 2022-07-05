@@ -21,27 +21,27 @@ $post_slug = $post->post_name;
       <div class="col-12">
         <ul class="list-nav list-inline">
 					<li class="list-nav__item list-nav__item-actived list-inline-item">
-						<a href="javascript:void(0)" class="list-nav__link">
+						<a href="#section-project" class="list-nav__link">
             O Projeto
 						</a>
 					</li>
 					<li class="list-nav__item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav__link">
+						<a href="#section-galeria" class="list-nav__link">
             Galeria
 						</a>
 					</li>
 					<li class="list-nav__item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav__link">
+						<a href="#section-mergulhos" class="list-nav__link">
             Mergulhos
 						</a>
 					</li>
 					<li class="list-nav__item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav__link">
+						<a href="#section-webnarios" class="list-nav__link">
             Webnários
 						</a>
 					</li>
           <li class="list-nav__item list-inline-item">
-						<a href="javascript:void(0)" class="list-nav__link">
+						<a href="#section-team" class="list-nav__link">
             Equipe
 						</a>
 					</li>
@@ -51,7 +51,7 @@ $post_slug = $post->post_name;
   </div>
 </section>
 
-<section id="page-content" class="container mt-5 mb-5">
+<section id="section-project" class="container mt-3 mb-5">
   <div class="row">
     <div class="col-12 text-left">
       <p><?php the_content(); ?></p>

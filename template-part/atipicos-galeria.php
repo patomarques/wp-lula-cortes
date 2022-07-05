@@ -3,7 +3,7 @@
   $queryGaleria = new WP_Query($argsGaleria);
 ?>
 
-<section id="section-" class="container-full section-content">
+<section id="section-galeria" class="container-full section-content">
   <div class="container mb-3">
     <div class="row">
       <div class="col-12">
