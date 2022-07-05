@@ -5,19 +5,57 @@ $post_slug = $post->post_name;
 
 ?>
 
+
+
 <section class="container-full page-music list-content mt-5 pt-5 mb-5">
 	<div class="container">
-		<div class="row mt-4 mb-5">
-			<div class="col-12 text-center">
+		<div class="row mt-5 mb-5">
+			<div class="col-12 text-center mt-3">
 				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/' . $post_slug . '.png' ?>" alt="<?= get_the_title() ?>" class="mx-auto d-block">
 			</div>
 		</div>
 	</div>
 </section>
 
-<section id="page-content" class="container mt-3 mb-5">
+<section id="section-nav" class="container-full bg-white section-nav--fixed">
+  <div class="container breadcrumbs-nav">
+    <div class="row">
+      <div class="col-12">
+        <ul class="list-nav list-inline">
+					<li class="list-nav__item list-nav__item-actived list-inline-item">
+						<a href="javascript:void(0)" class="list-nav__link">
+            O Projeto
+						</a>
+					</li>
+					<li class="list-nav__item list-inline-item">
+						<a href="javascript:void(0)" class="list-nav__link">
+            Galeria
+						</a>
+					</li>
+					<li class="list-nav__item list-inline-item">
+						<a href="javascript:void(0)" class="list-nav__link">
+            Mergulhos
+						</a>
+					</li>
+					<li class="list-nav__item list-inline-item">
+						<a href="javascript:void(0)" class="list-nav__link">
+            Webnários
+						</a>
+					</li>
+          <li class="list-nav__item list-inline-item">
+						<a href="javascript:void(0)" class="list-nav__link">
+            Equipe
+						</a>
+					</li>
+				</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="page-content" class="container mt-6 mb-5">
   <div class="row">
-    <div class="col-12 text-justify">
+    <div class="col-12 text-left">
       <p><?php the_content(); ?></p>
     </div>
   </div>
@@ -35,7 +73,7 @@ $post_slug = $post->post_name;
     <div class="col-12">
       <p>A curadoria dessa exposição virtual pretende apresentar ao público parte da série de pinturas intitulada Atípicos, de autoria de Lula Cortês, que está contida em acervo particulares – uma rede de amigos, sustentada por amores, paixões e muita amizade – que foi acionada por meio da realização de uma investigação que derivou em uma série de atividades, ações e sobretudo uma pesquisa a acerca da produção plástica do artista multidisciplinar Lula Cortês. [...]
       </p>
-      <a class="btn btn-dark" href="https://docs.google.com/document/d/1r1DF8wcvcnxGIdZna6uzOTNw6UoCZ4HioIc6YJ-GV9g/edit?usp=sharing">
+      <a class="btn btn-dark" href="<?= get_site_url() . '/mergulhos' ?>">
         Ver mais
       </a>
     </div>
