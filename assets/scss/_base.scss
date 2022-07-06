@@ -361,6 +361,29 @@ p {
   height: 100%;
 }
 
+/*MVP HOME TEMPORARY */
+.btn{
+  display: none !important;
+}
+
+a{
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+
+}
+
+.button_container{
+  display: none !important;
+}
+
+footer{
+  a{
+    pointer-events: inherit !important;
+    cursor: pointer !important;    
+  }
+}
+
 @media (min-width: 320px) {
   .list-nav--item {
     margin-right: 15px !important;
