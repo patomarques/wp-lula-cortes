@@ -3,7 +3,7 @@
   $queryTeam = new WP_Query($argsTeam);
 ?>
 
-<section id="section-team" class="container mt-5 mb-5">
+<section id="section-team" class="section-nav container mt-5 mb-5">
   <div class="row mb-3">
     <div class="col-12 subtitle-section">Equipe</div>
   </div>

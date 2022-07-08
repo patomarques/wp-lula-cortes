@@ -1,15 +1,15 @@
 (function ($) {
   $(document).ready(function () {
 
-    $(".nav-link").on("click", function () {
-      let toggle = $(".toggle")[0];
-      toggle.click();
+    // $(".nav-link").on("click", function () {
+    //   let toggle = $(".toggle")[0];
+    //   toggle.click();
 
-      var sectionToScroll = $(this).attr("href").replace("#", "#section-");
-      $("html, body").animate({
-        scrollTop: $(sectionToScroll).offset().top - 30,
-      });
-    });
+    //   var sectionToScroll = $(this).attr("href").replace("#", "#section-");
+    //   $("html, body").animate({
+    //     scrollTop: $(sectionToScroll).offset().top - 30,
+    //   });
+    // });
 
     var $animation_elements = $(".slide");
     var $window = $(window);
@@ -33,7 +33,7 @@
     }
 
     function fixMenu() {
-      console.log('fix menu()');
+      //console.log('fix menu()');
       //menu-main--dark
       //console.log('menu effect ', sectionElement.scrollTop);
     }
@@ -41,15 +41,15 @@
     let menuElement = $(".menu-main");
     let nextSectionContent = document.getElementById("page-content");
 
-    console.log('nextSectionContent', nextSectionContent);
+    //console.log('nextSectionContent', nextSectionContent);
 
     if (nextSectionContent != null) {
       let elementHeight = nextSectionContent.offsetHeight;
 
-      console.log('elementHeight', elementHeight);
+      //console.log('elementHeight', elementHeight);
 
       $(window).scroll(function () {
-        console.log('scroll', elementHeight);
+       // console.log('scroll', elementHeight);
         if ($(document).scrollTop() > elementHeight) {
           menuElement.addClass("shrink menu-main--dark");
         } else {
@@ -90,9 +90,9 @@
     }
 
     $(window).on('scroll', function () {
-      console.log('scrollando;;;', $(this).scrollTop());
+      //console.log('scrollando;;;', $(this).scrollTop());
     });
 
-    navSectionScroll();
+    //navSectionScroll();
   });
 })(jQuery);

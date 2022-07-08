@@ -3,7 +3,7 @@
   $queryWebnarios = new WP_Query($argsWebnarios);
 ?>
 
-<section id="section-webnarios" class="container-full section-content">
+<section id="section-webnarios" class="section-nav container-full section-content">
   <div class="container">
     <div class="row mt-5 pt-5">
       <div class="col-12">

@@ -12,11 +12,11 @@
     loadMenuButtonClickEffect();
 
     window.addEventListener('scroll', (event) => {
-      console.log('Scrolling...');
+      //console.log('Scrolling...');
     });
 
     window.onscroll = function (event) {
-      console.log('Scrolling 222...');
+      //console.log('Scrolling 222...');
     };
 
     $('.menu-main').addClass('shrink menu-main--dark');

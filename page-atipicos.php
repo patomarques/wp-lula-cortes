@@ -5,53 +5,54 @@ $post_slug = $post->post_name;
 
 ?>
 
-<section class="container-full page-music list-content mt-5 pt-5 mb-5">
-	<div class="container">
-		<div class="row mt-5 mb-5">
-			<div class="col-12 text-center mt-4">
-				<img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/' . $post_slug . '.png' ?>" alt="<?= get_the_title() ?>" class="mx-auto d-block">
-			</div>
-		</div>
-	</div>
-</section>
+<div class="container page-music list-content mt-5 pt-5 mb-5">
+  <div class="row mt-5 mb-5">
+    <div class="col-12 text-center mt-4">
+      <img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/' . $post_slug . '.png' ?>" alt="<?= get_the_title() ?>" class="mx-auto d-block">
+    </div>
+  </div>
+</div>
 
-<section id="section-nav" class="container-full bg-white section-nav--fixed">
+<div id="section-nav" class="container-full bg-white section-nav--fixed">
   <div class="container breadcrumbs-nav">
     <div class="row">
       <div class="col-12">
-        <ul class="list-nav list-inline">
-					<li class="list-nav__item list-nav__item-actived list-inline-item">
-						<a href="#section-project" class="list-nav__link">
-            O Projeto
-						</a>
-					</li>
-					<li class="list-nav__item list-inline-item">
-						<a href="#section-galeria" class="list-nav__link">
-            Galeria
-						</a>
-					</li>
-					<li class="list-nav__item list-inline-item">
-						<a href="#section-mergulhos" class="list-nav__link">
-            Mergulhos
-						</a>
-					</li>
-					<li class="list-nav__item list-inline-item">
-						<a href="#section-webnarios" class="list-nav__link">
-            Webnários
-						</a>
-					</li>
-          <li class="list-nav__item list-inline-item">
-						<a href="#section-team" class="list-nav__link">
-            Equipe
-						</a>
-					</li>
-				</ul>
+
+        <nav id="navMenuFixed" class="navMenuFixed">
+          <ul class="list-nav list-inline">
+              <li class="list-nav__item list-inline-item">
+                <a href="#section-project" class="list-nav__link">
+                O Projeto
+                </a>
+              </li>
+              <li class="list-nav__item list-inline-item">
+                <a href="#section-galeria" class="list-nav__link">
+                Galeria
+                </a>
+              </li>
+              <li class="list-nav__item list-inline-item">
+                <a href="#section-mergulhos" class="list-nav__link">
+                Mergulhos
+                </a>
+              </li>
+              <li class="list-nav__item list-inline-item">
+                <a href="#section-webnarios" class="list-nav__link">
+                Webnários
+                </a>
+              </li>
+              <li class="list-nav__item list-inline-item">
+                <a href="#section-team" class="list-nav__link">
+                Equipe
+                </a>
+              </li>
+            </ul>
+        </nav>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section id="section-project" class="container mt-3 mb-5">
+<section id="section-project" class="section-nav container mt-3 mb-5">
   <div class="row">
     <div class="col-12 text-left">
       <p><?php the_content(); ?></p>
@@ -61,7 +62,7 @@ $post_slug = $post->post_name;
 
 <?php get_template_part('template-part/atipicos-galeria'); ?>
 
-<section id="section-mergulhos" class="container section-content">
+<section id="section-mergulhos" class="section-nav container section-content">
   <div class="row mt-5">
     <div class="col-12">
       <h3 class="subtitle-section">Mergulhos</h3>
