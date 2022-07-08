@@ -31,7 +31,7 @@
 
                   <?php while ($queryContacts->have_posts()) : $queryContacts->the_post(); ?>
                     <li class="social-icons__item d-inline">
-                        <a href="<?= get_the_content() ?>" class="social-icons__link" target="_black" rel="noopener" title="<?= get_the_title() ?>">
+                        <a href="<?= get_the_content() ?>" class="social-icons__link" target="_blank" rel="noopener" title="<?= get_the_title() ?>">
                             <i class="<?= get_post_field('icon-class') ?>"></i>
                         </a>
                     </li>

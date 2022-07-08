@@ -342,7 +342,7 @@ function create_custom_post_type()
 function register_custom_taxonomies() {
   $slugs = ['musicas', 'videos'];
 
-  for($index; $index < count($slugs); $index++) {
+  for($index = 0; $index < count($slugs); $index++) {
 
     $rewrite = array(
       'slug'                       => $slugs[$index],
