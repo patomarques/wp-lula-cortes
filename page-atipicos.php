@@ -72,7 +72,7 @@ $post_slug = $post->post_name;
     <div class="col-12">
       <p>A curadoria dessa exposição virtual pretende apresentar ao público parte da série de pinturas intitulada Atípicos, de autoria de Lula Cortês, que está contida em acervo particulares – uma rede de amigos, sustentada por amores, paixões e muita amizade – que foi acionada por meio da realização de uma investigação que derivou em uma série de atividades, ações e sobretudo uma pesquisa a acerca da produção plástica do artista multidisciplinar Lula Cortês. [...]
       </p>
-      <a class="btn btn-dark" href="<?= get_site_url() . '/mergulhos' ?>">
+      <a class="btn btn-dark" href="<?= get_site_url() . '/atipicos/mergulhos' ?>">
         Ver mais
       </a>
     </div>

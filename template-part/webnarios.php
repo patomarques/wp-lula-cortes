@@ -26,19 +26,14 @@
 
       <div class="slick-squares__item">
         <div class="slick-squares__item__text">
-          <a href="javascript:void(0)" role="button" class="slick-squares__link"
-          data-toggle="modal" data-target="#modal-webnarios"
-          data-video-url="<?= get_the_content() ?>">
-            <p class="slick-squares__title"><?= get_the_title() ?></p>
-            <!-- <p class="slick-squares__subtitle">2000</p> -->
-          </a>
+          <p class="slick-squares__title"><?= get_the_title() ?></p>
         </div>
         <a href="javascript:void(0)"
           rel="noopener" title="<?= get_the_title() ?>"
           class="slick-squares__box-image slick-squares__link"
           data-toggle="modal" data-target="#modal-webnarios"
           style="background-image: url(<?=  $thumbs ?>)"
-          data-video-url="<?= get_the_content() ?>">
+          data-video-url="<?= get_post_field('youtube-url') ?>">
           <div class="slick-squares__box-image__spacer"></div>
         </a>
       </div>
@@ -64,7 +59,7 @@
       </div>
       <div class="modal-body">
         <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/YmuojSvz42g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
       <div class="modal-footer hidden">

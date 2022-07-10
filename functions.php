@@ -183,51 +183,6 @@ function create_custom_post_type()
     );
 
     register_post_type(
-        'gravuras',
-        array(
-            'labels' => array(
-                'name' => __('Gravuras'),
-                'singular_name' => __('Gravura')
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
-            'menu_icon' => 'dashicons-format-image',
-            'exclude_from_search' => true
-        )
-    );
-
-    register_post_type(
-        'esbocos',
-        array(
-            'labels' => array(
-                'name' => __('Esboços'),
-                'singular_name' => __('Esboço')
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
-            'menu_icon' => 'dashicons-format-image',
-            'exclude_from_search' => true
-        )
-    );
-
-    register_post_type(
-        'memoria-grafica',
-        array(
-            'labels' => array(
-                'name' => __('Memória Gráfica'),
-                'singular_name' => __('Memória Gráfica')
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
-
-            'exclude_from_search' => true
-        )
-    );
-
-    register_post_type(
         'videos',
         array(
             'labels' => array(
@@ -333,6 +288,20 @@ function create_custom_post_type()
             'labels' => array(
                 'name' => __('Contatos'),
                 'singular_name' => __('Contato')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+            'exclude_from_search' => true
+        )
+    );
+
+    register_post_type(
+        'mergulhos',
+        array(
+            'labels' => array(
+                'name' => __('Mergulhos'),
+                'singular_name' => __('Mergulho')
             ),
             'public' => true,
             'has_archive' => true,
