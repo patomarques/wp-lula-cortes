@@ -12,18 +12,21 @@
     </div>
   </div>
   <div class="container-full content-slick-squares mb-5">
-    <div id="slick-galeria" class="slick-squares">
+    <div id="slick-galeria" class="slick-squares gallery-fullscreen">
 
       <?php while ($queryGaleria->have_posts()) : $queryGaleria->the_post(); ?>
 
       <div class="slick-squares__item">
         <div class="slick-squares__item__text">
-          <a href="/" class="slick-squares__link">
-            <p class="slick-squares__title">Title <?= get_the_title() ?></p>
+          <!-- <a href="<?= get_the_post_thumbnail_url() ?>" class="slick-squares__link" data-lightbox="<?= get_the_post_thumbnail_url() ?>" data-title="<?= get_the_title() ?>"> -->
+            <p class="slick-squares__title"><?= get_the_title() ?></p>
             <!-- <p class="slick-squares__subtitle">2000</p> -->
-          </a>
+          <!-- </a> -->
         </div>
-        <a href="/" class="slick-squares__box-image slick-squares__link"
+        <a href="<?= get_the_post_thumbnail_url() ?>"
+          class="slick-squares__box-image slick-squares__link"
+          data-fslightbox="first-lightbox"
+          data-title="<?= get_the_title() ?>"
           style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
           <div class="slick-squares__box-image__spacer"></div>
         </a>

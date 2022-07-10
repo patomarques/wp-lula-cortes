@@ -94,5 +94,17 @@
     });
 
     //navSectionScroll();
+
+    function galleryFullscreen() {
+      let el = $('.gallery-fullscreen');
+
+      if(el.lenght > 0){
+        fsLightboxInstances['Atipicos - Galeria'].open(0);
+        //fsLightboxInstances['second-lightbox'].props.onOpen = () => console.log('Lightbox open!');
+      }
+    }
+
+    galleryFullscreen();
+
   });
 })(jQuery);
