@@ -4,7 +4,7 @@
 ?>
 
 <div class="container-full content-slick-squares mt-5 mb-5">
-  <div id="slick-quadros" class="slick-squares mb-5">
+  <div id="grid-squares" class="slick-squares mb-5">
 
     <?php while ($queryQuadros->have_posts()) : $queryQuadros->the_post(); ?>
 
@@ -22,9 +22,11 @@
           <p class="slick-squares__title"><?= get_the_title() ?></p>
         </a>
       </div>
-      <a href="/"
+      <a href="<?=  $thumbs ?>"
         target="_black" rel="noopener" title="<?= get_the_title() ?>"
         class="slick-squares__box-image slick-squares__link"
+        data-fslightbox="grid-lightbox-squares"
+        data-title="<?= get_the_title() ?>"
         style="background-image: url(<?=  $thumbs ?>)">
         <div class="slick-squares__box-image__spacer"></div>
       </a>

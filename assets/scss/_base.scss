@@ -243,14 +243,15 @@ p {
   width: 100%;
   padding: 0;
   margin: 0;
-  //height: 25vh;
-  //display: flex;
+  display: flex;
+  flex-wrap: wrap;
 
   &__item {
     width: 25vw;
     //height: 0 !important;
     //border: 1px solid $color-gray;
     position: relative;
+    margin-bottom: 25px;
 
     &__text {
       background-color: $color-white;

@@ -95,16 +95,19 @@
 
     //navSectionScroll();
 
-    function galleryFullscreen() {
-      let el = $('.gallery-fullscreen');
-
-      if(el.lenght > 0){
-        fsLightboxInstances['Atipicos - Galeria'].open(0);
-        //fsLightboxInstances['second-lightbox'].props.onOpen = () => console.log('Lightbox open!');
+    function galleryFullscreen(element, galeryName) {
+      if(elelement.lenght > 0){
+        const lightbox = new FsLightbox();
+        fsLightboxInstances[galeryName].open(0);
       }
     }
 
-    galleryFullscreen();
+    galleryFullscreen($('.gallery-fullscreen'), 'first-lightbox');
+    galleryFullscreen($('#grid-squares'), 'grid-lightbox-squares');
+
+    if(window.location.pathname != '/'){
+      $('.menu-main').addClass('shrink menu-main--dark');
+    }
 
   });
 })(jQuery);

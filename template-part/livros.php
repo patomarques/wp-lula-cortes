@@ -20,15 +20,9 @@
       <div class="slick-squares__item__text">
         <a href="/" class="slick-squares__link">
           <p class="slick-squares__title"><?= get_the_title() ?></p>
-          <!-- <p class="slick-squares__subtitle">2000</p> -->
         </a>
       </div>
-      <a href="/"
-        target="_black" rel="noopener" title="<?= get_the_title() ?>"
-        class="slick-squares__box-image slick-squares__link"
-        style="background-image: url(<?=  $thumbs ?>)">
-        <div class="slick-squares__box-image__spacer"></div>
-      </a>
+
     </div>
 
     <?php
