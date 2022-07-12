@@ -23,6 +23,8 @@ a {
 
 p {
   font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.8em;
 }
 
 .hidden {
@@ -362,27 +364,62 @@ p {
   height: 100%;
 }
 
+.grid-rectangles {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__image {
+    position: relative;
+    width: 100%;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 65%;
+      width: 100%;
+      height: 0;
+      //background: orange;
+    }
+  }
+
+  .title-section-medium {
+    min-height: 50px;
+  }
+
+  &__link {}
+}
+
 /*MVP HOME TEMPORARY */
-.home{
-  .btn{
+.home {
+  .btn {
     display: none !important;
   }
-  
-  a{
+
+  a {
     cursor: not-allowed !important;
     pointer-events: none !important;
     opacity: 1 !important;
-  
+
   }
-  
-  .button_container{
+
+  .button_container {
     display: none !important;
   }
-  
-  footer{
-    a{
+
+  footer {
+    a {
       pointer-events: inherit !important;
-      cursor: pointer !important;    
+      cursor: pointer !important;
     }
   }
 }

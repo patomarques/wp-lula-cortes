@@ -3,37 +3,28 @@
   $queryPdfs = new WP_Query($argsPdfs);
 ?>
 
-<div class="container-full content-slick-squares mt-5 mb-5">
-  <div id="slick-pdfs" class="slick-squares mb-5">
-
-    <?php while ($queryPdfs->have_posts()) : $queryPdfs->the_post(); ?>
-
-    <?php
-      $thumbs = get_the_post_thumbnail_url();
-
-      if($thumbs == ''){
-        $thumbs = get_site_url() . '/wp-content/uploads/2022/06/no-image.jpg';
-      }
-    ?>
-
-    <div class="slick-squares__item">
-      <div class="slick-squares__item__text">
-        <a href="/" class="slick-squares__link">
-          <p class="slick-squares__title"><?= get_the_title() ?></p>
-        </a>
-      </div>
-      <a href="/"
-        target="_black" rel="noopener" title="<?= get_the_title() ?>"
-        class="slick-squares__box-image slick-squares__link"
-        style="background-image: url(<?=  $thumbs ?>)">
-        <div class="slick-squares__box-image__spacer"></div>
-      </a>
+<section id="section-zines" class="section-nav container section-content">
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="subtitle-section">PDF's</h3>
     </div>
+  </div>
 
-    <?php
-      endwhile;
-      wp_reset_postdata();
-    ?>
+
+  <div class="row">
+
+      <?php while ($queryPdfs->have_posts()) : $queryPdfs->the_post(); ?>
+
+      <div class="col-12">
+        <p><?= the_content() ?></p>
+
+        <a href="<?= get_post_field('ver-mais') ?>" class="btn btn-dark" target="_blank">Ver mais</a>
+      </div>
+
+      <?php
+          endwhile;
+          wp_reset_postdata();
+      ?>
 
   </div>
-</div>
+</section>

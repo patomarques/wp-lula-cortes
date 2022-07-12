@@ -26,40 +26,63 @@ $queryVideos = new WP_Query($argsVideos);
   </div>
 </section>
 
-<div class="container-full content-slick-squares mt-2 mb-5">
-    <div id="slick-videos" class="slick-squares mb-5">
+<div class="container-full mt-2 mb-5">
+    <div id="grid-videos" class="grid-rectangles mb-5">
 
-      <?php while ($queryVideos->have_posts()) : $queryVideos->the_post(); ?>
+      <div class="row">
 
-      <?php
-        $thumbs = get_the_post_thumbnail_url();
+        <?php while ($queryVideos->have_posts()) : $queryVideos->the_post(); ?>
 
-        if($thumbs == ''){
-          $thumbs = get_site_url() . '/wp-content/uploads/2022/06/no-image.jpg';
-        }
-      ?>
+        <?php
+          $thumbs = get_the_post_thumbnail_url();
 
-      <div class="slick-squares__item">
-        <div class="slick-squares__item__text">
-          <a href="<?= get_post_field('youtube-link') ?>" class="slick-squares__link">
-            <p class="slick-squares__title"><?= get_the_title() ?></p>
-            <!-- <p class="slick-squares__subtitle">2000</p> -->
+          if($thumbs == ''){
+            $thumbs = get_site_url() . '/wp-content/uploads/2022/06/no-image.jpg';
+          }
+        ?>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 mb-4 p-0">
+          <h3 class="title-section-medium mb-1 pl-3 pr-3 text-center">
+            <?= get_the_title() ?>
+          </h3>
+
+          <a href="<?= get_post_field('youtube-link') ?>"
+            target="_black" rel="noopener" title="<?= get_the_title() ?>"
+            class="grid-rectangles__image grid-rectangles__link"
+            data-toggle="modal" data-target="#modal-videos"
+            data-video-url="<?= get_post_field('youtube-link') ?>"
+            data-title="<?= the_title() ?>"
+            style="background-image: url(<?=  $thumbs ?>)">
           </a>
         </div>
-        <a href="<?= get_post_field('youtube-link') ?>"
-          target="_black" rel="noopener" title="<?= get_the_title() ?>"
-          class="slick-squares__box-image slick-squares__link"
-          style="background-image: url(<?=  $thumbs ?>)">
-          <div class="slick-squares__box-image__spacer"></div>
-        </a>
-      </div>
 
-      <?php
-			  endwhile;
-			  wp_reset_postdata();
-			?>
+        <?php
+          endwhile;
+          wp_reset_postdata();
+        ?>
+      </div>
 
     </div>
   </div>
+
+<div class="modal fade" id="modal-videos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="video-container">
+          <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer hidden">
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php get_footer(); ?>

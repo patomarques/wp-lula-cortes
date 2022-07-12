@@ -41,12 +41,8 @@
     let menuElement = $(".menu-main");
     let nextSectionContent = document.getElementById("page-content");
 
-    //console.log('nextSectionContent', nextSectionContent);
-
     if (nextSectionContent != null) {
       let elementHeight = nextSectionContent.offsetHeight;
-
-      //console.log('elementHeight', elementHeight);
 
       $(window).scroll(function () {
        // console.log('scroll', elementHeight);
@@ -64,11 +60,16 @@
 
     $('.slick-squares__link').on('click', function () {
       let videoUrl = $(this).data('video-url');
+
       $('#modal-webnarios iframe').attr('src', videoUrl);
     });
 
-    $('.slick-videos .slick-squares__link').on('click', function () {
+    $('#grid-videos .grid-rectangles__link').on('click', function () {
       let videoUrl = $(this).data('video-url');
+      let title = $(this).data('title');
+
+      console.log('title ', title, videoUrl);
+      $('#modal-videos .modal-title').text(title);
       $('#modal-videos iframe').attr('src', videoUrl);
     });
 
@@ -96,7 +97,7 @@
     //navSectionScroll();
 
     function galleryFullscreen(element, galeryName) {
-      if(elelement.lenght > 0){
+      if(element.lenght > 0){
         const lightbox = new FsLightbox();
         fsLightboxInstances[galeryName].open(0);
       }

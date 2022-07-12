@@ -2,39 +2,27 @@
   $argsAudioBooks = array('post_type' => 'audiobooks', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
   $queryAudioBooks = new WP_Query($argsAudioBooks);
 ?>
-
-<div class="container-full content-slick-squares mt-5 mb-5">
-  <div id="slick-zines" class="slick-squares mb-5">
-
-    <?php while ($queryAudioBooks->have_posts()) : $queryAudioBooks->the_post(); ?>
-
-    <?php
-      $thumbs = get_the_post_thumbnail_url();
-
-      if($thumbs == ''){
-        $thumbs = get_site_url() . '/wp-content/uploads/2022/06/no-image.jpg';
-      }
-    ?>
-
-    <div class="slick-squares__item">
-      <div class="slick-squares__item__text">
-        <a href="/" class="slick-squares__link">
-          <p class="slick-squares__title"><?= get_the_title() ?></p>
-          <!-- <p class="slick-squares__subtitle">2000</p> -->
-        </a>
-      </div>
-      <a href="/"
-        target="_black" rel="noopener" title="<?= get_the_title() ?>"
-        class="slick-squares__box-image slick-squares__link"
-        style="background-image: url(<?=  $thumbs ?>)">
-        <div class="slick-squares__box-image__spacer"></div>
-      </a>
+<section id="section-zines" class="section-nav container section-content">
+  <div class="row mt-5 mb-3">
+    <div class="col-12">
+      <h3 class="subtitle-section">Audiobooks</h3>
     </div>
+  </div>
 
-    <?php
-      endwhile;
-      wp_reset_postdata();
-    ?>
+
+  <div class="row">
+
+      <?php while ($queryAudioBooks->have_posts()) : $queryAudioBooks->the_post(); ?>
+
+      <div class="col-12 col-md-6">
+        <h3 class="title-section-medium"><?= the_title() ?></h3>
+        <p><?= the_content() ?></p>
+      </div>
+
+      <?php
+          endwhile;
+          wp_reset_postdata();
+      ?>
 
   </div>
-</div>
+</section>

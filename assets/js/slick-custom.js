@@ -9,13 +9,9 @@
         '#slick-galeria',
         '#slick-webnarios',
         '#slick-quadros',
-        '#slick-gravuras',
-        '#slick-esbocos',
         '#slick-memoria-grafica',
         '#slick-videos',
-        '#slick-livros',
-        '#slick-zines',
-        '#slick-audiobooks'];
+        ];
 
       for(let counter = 0; counter < elementIDS.length; counter++) {
         if ($(elementIDS[counter]).length > 0) {
