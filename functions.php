@@ -216,8 +216,8 @@ function create_custom_post_type()
             ),
             'public' => true,
             'has_archive' => true,
-            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
-
+            'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields', 'page-attributes'),
+            'hierarchical' => false,
             'exclude_from_search' => true
         )
     );
@@ -339,6 +339,24 @@ function register_custom_taxonomies() {
   }
 
 }
+
+function set_custom_post_types_admin_order($wp_query) {
+  if (is_admin()) {
+
+    // Get the post type from the query
+    $post_type = $wp_query->query['post_type'];
+
+    if ( $post_type == 'livros') {
+
+      // 'orderby' value can be any column name
+      $wp_query->set('orderby', 'ano-lancamento');
+
+      // 'order' value can be ASC or DESC
+      $wp_query->set('order', 'ASC');
+    }
+  }
+}
+add_action('pre_get_posts', 'set_custom_post_types_admin_order');
 
 // Hooking up our function to theme setup
 add_action('init', 'create_custom_post_type', 0);
