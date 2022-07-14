@@ -1,8 +1,6 @@
 <?php
   $argsGaleria = array('post_type' => 'galeria', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
   $queryGaleria = new WP_Query($argsGaleria);
-
-  $audioDescriptions = [];
 ?>
 
 <section id="section-galeria" class="section-nav container-full section-content">
@@ -37,8 +35,6 @@
       </div>
 
       <?php
-
-        $audioDescriptions[get_the_id()] = get_post_field('audio-descricao');
 			  endwhile;
 			  wp_reset_postdata();
 			?>
