@@ -4,7 +4,7 @@
 ?>
 
 <div class="container-full content-slick-squares mt-5 mb-5">
-  <div id="grid-squares" class="slick-squares mb-5">
+  <div id="grid-squares" class="grid-squares slick-squares mb-5">
 
     <?php while ($queryQuadros->have_posts()) : $queryQuadros->the_post(); ?>
 
@@ -18,7 +18,7 @@
     ?>
 
     <div class="slick-squares__item">
-      <div class="slick-squares__item__text">
+      <div class="slick-squares__item__text hidden">
         <a href="/" class="slick-squares__link">
           <p class="slick-squares__title"><?= get_the_title() ?></p>
         </a>

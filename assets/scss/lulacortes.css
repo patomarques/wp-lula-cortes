@@ -2,7 +2,7 @@
   background-color: #000000;
 }
 
-.trans, .title-section, a, .list-nav--item, .player-content, .menu-main, .slick-prev,
+.trans, .title-section, a, .list-nav--item, .player-content, .home .square .content, .menu-main, .slick-prev,
 .slick-next {
   transition: all 0.5s ease;
 }
@@ -416,6 +416,30 @@ p {
 }
 
 /*MVP HOME TEMPORARY */
+.home {
+  /*  .btn {
+    display: none !important;
+  }
+
+  a {
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    opacity: 1 !important;
+
+  }
+
+  .button_container {
+    display: none !important;
+  }
+
+  footer {
+    a {
+      pointer-events: inherit !important;
+      cursor: pointer !important;
+    }
+  } */
+}
+
 .home .square .content {
   filter: grayscale(100%);
 }
@@ -424,23 +448,8 @@ p {
   filter: grayscale(0%);
 }
 
-.home .btn {
-  display: none !important;
-}
-
-.home a {
-  cursor: not-allowed !important;
-  pointer-events: none !important;
-  opacity: 1 !important;
-}
-
-.home .button_container {
-  display: none !important;
-}
-
-.home footer a {
-  pointer-events: inherit !important;
-  cursor: pointer !important;
+.grid-squares .slick-squares__item {
+  margin-bottom: 0 !important;
 }
 
 @media (min-width: 320px) {

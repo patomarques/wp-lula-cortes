@@ -34,7 +34,7 @@ $queryVideos = new WP_Query($argsVideos);
         <?php while ($queryVideos->have_posts()) : $queryVideos->the_post(); ?>
 
         <?php
-          $thumbs = get_the_post_thumbnail_url();
+          $thumbs = get_the_post_thumbnail_url(get_the_ID(), 'single-post-thumbnail');
 
           if($thumbs == ''){
             $thumbs = get_site_url() . '/wp-content/uploads/2022/06/no-image.jpg';

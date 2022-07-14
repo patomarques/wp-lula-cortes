@@ -57,14 +57,14 @@
 <div class="container-full player-content hidden">
   <div class="container">
     <div class="row">
-      <div class="col-10 col-sm-9">
+      <div class="col-10 col-sm-12">
         <audio id="player-audio" controls="controls">
           <source src="" />
           Ops, seu navegador não suporta html5!
         </audio>
       </div>
-      <div class="col-2 col-sm-3 text-right hidden">
-        <button class="btn btn-light">Ficha Técnica</button>
+      <div class="col-2 col-sm-3 text-right">
+        <button class="btn btn-link btn-link">Ficha Técnica</button>
       </div>
     </div>
   </div>

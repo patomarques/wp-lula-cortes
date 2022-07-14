@@ -12,12 +12,12 @@ $queryMergulhos = new WP_Query($argsMergulhos);
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
 <section id="page-content" class="container content-sections">
-  <div class="row pt-5 mb-3">
+  <div class="row pt-5 mb-5">
     <div class="col-12 mt-5 text-center">
         <h1>Mergulhos</h1>
     </div>
   </div>
-  <div class="row mt-3 mb-5">
+  <div class="row mt-3 mb-5 hidden">
     <div class="col-12 text-justify">
       <p><?//php the_content(); ?></p>
     </div>

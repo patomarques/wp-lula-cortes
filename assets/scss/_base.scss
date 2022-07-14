@@ -420,10 +420,10 @@ p {
 
 /*MVP HOME TEMPORARY */
 .home {
-
   .square {
     .content {
       filter: grayscale(100%);
+      @extend .trans;
     }
   }
 
@@ -437,7 +437,7 @@ p {
     }
   }
 
-  .btn {
+ /*  .btn {
     display: none !important;
   }
 
@@ -457,6 +457,12 @@ p {
       pointer-events: inherit !important;
       cursor: pointer !important;
     }
+  } */
+}
+
+.grid-squares{
+  .slick-squares__item {
+    margin-bottom: 0 !important;
   }
 }
 

@@ -56,7 +56,7 @@
     $window.on("scroll", fixMenu);
 
     $('.slick-squares__link').on('click', function () {
-      let videoUrl = $(this).data('video-url');
+      let videoUrl = $(this).data('youtube-link');
       $('#modal-webnarios iframe').attr('src', videoUrl);
     });
 

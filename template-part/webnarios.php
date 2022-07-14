@@ -33,7 +33,7 @@
           class="slick-squares__box-image slick-squares__link"
           data-toggle="modal" data-target="#modal-webnarios"
           style="background-image: url(<?=  $thumbs ?>)"
-          data-video-url="<?= get_post_field('youtube-url') ?>">
+          data-youtube-link="<?= get_post_field('youtube-link') ?>">
           <div class="slick-squares__box-image__spacer"></div>
         </a>
       </div>

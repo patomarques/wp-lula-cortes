@@ -5,7 +5,7 @@ $post_slug = $post->post_name;
 
 ?>
 
-<div id="section-nav" class="container-full bg-white section-nav--fixed">
+<div id="section-nav" class="container-full bg-white section-nav--fixed hidden">
   <div class="container breadcrumbs-nav">
     <div class="row">
       <div class="col-12">
@@ -46,7 +46,7 @@ $post_slug = $post->post_name;
 </div>
 
 <section id="page-content" class="container content-sections">
-  <div class="row pt-5 mt-4 mb-3">
+  <div class="row pt-5 mt-0 mb-3">
     <div class="col-12 mt-5 pt-4">
     <img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/' . $post_slug . '.png' ?>" alt="<?= get_the_title() ?>" class="mx-auto d-block">
     </div>

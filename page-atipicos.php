@@ -5,9 +5,9 @@ $post_slug = $post->post_name;
 
 ?>
 
-<div class="container page-music list-content mt-5 pt-5 mb-5">
-  <div class="row mt-5 mb-5">
-    <div class="col-12 text-center mt-4">
+<div class="container page-music list-content mt-5 pt-2 mb-5">
+  <div class="row mt-5 mb-3">
+    <div class="col-12 text-center mt-2">
       <img src="<?= get_site_url() . '/wp-content/themes/wp-lula-cortes-child/assets/img/title-png/' . $post_slug . '.png' ?>" alt="<?= get_the_title() ?>" class="mx-auto d-block">
     </div>
   </div>
