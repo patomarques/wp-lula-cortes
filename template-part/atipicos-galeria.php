@@ -1,6 +1,8 @@
 <?php
   $argsGaleria = array('post_type' => 'galeria', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
   $queryGaleria = new WP_Query($argsGaleria);
+
+  $dataGalery = [];
 ?>
 
 <section id="section-galeria" class="section-nav container-full section-content">
@@ -10,18 +12,27 @@
         <h3 class="subtitle-section">Galeria</h3>
       </div>
     </div>
+    <div class="row">
+      <div class="col-12">
+        <p>A curadoria dessa exposição virtual pretende apresentar ao público parte da série de pinturas intitulada Atípicos, de autoria de Lula Côrtes, que está contida em acervo particulares – uma rede de amigos, sustentada por amores, paixões e muita amizade – que foi acionada por meio da realização de uma investigação que derivou em uma série de atividades, ações e sobretudo uma pesquisa a acerca da produção plástica do artista multidisciplinar Lula Côrtes. [...]</p>
+      </div>
+    </div>
   </div>
   <div class="container-full content-slick-squares mb-5">
     <div id="slick-galeria" class="slick-squares gallery-fullscreen">
 
-      <?php while ($queryGaleria->have_posts()) : $queryGaleria->the_post(); ?>
+      <?php while ($queryGaleria->have_posts()) : $queryGaleria->the_post();
+
+        $dataGalery[get_the_id()] = [
+          'title' => get_the_title(),
+          'url' => get_the_post_thumbnail_url(),
+          'audio' => get_post_field('audio-descricao')
+        ];
+      ?>
 
       <div class="slick-squares__item">
         <div class="slick-squares__item__text">
-          <!-- <a href="<?= get_the_post_thumbnail_url() ?>" class="slick-squares__link" data-lightbox="<?= get_the_post_thumbnail_url() ?>" data-title="<?= get_the_title() ?>"> -->
-            <p class="slick-squares__title"><?= get_the_title() ?></p>
-            <!-- <p class="slick-squares__subtitle">2000</p> -->
-          <!-- </a> -->
+          <p class="slick-squares__title"><?= get_the_title() ?></p>
         </div>
         <a href="<?= get_the_post_thumbnail_url() ?>"
           class="slick-squares__box-image slick-squares__link"
@@ -58,3 +69,9 @@
     </div>
   </div>
 </div>
+
+<input type="hidden" name="dataGalery" id="dataGalery" value="<?= $dataGalery ?>">
+<script>
+  let dataGallery = <?= json_encode($dataGalery) ?>;
+</script>
+

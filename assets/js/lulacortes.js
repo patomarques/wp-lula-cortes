@@ -1,6 +1,8 @@
 (function ($) {
   $(document).ready(function () {
 
+    const playerElement = document.getElementById('player-audio');
+
     // $(".nav-link").on("click", function () {
     //   let toggle = $(".toggle")[0];
     //   toggle.click();
@@ -39,7 +41,6 @@
         let elementHeight = nextSectionContent.offsetHeight;
 
         $(window).scroll(function () {
-          // console.log('scroll', elementHeight);
           if ($(window).scrollTop() > elementHeight) {
             menuElement.addClass("shrink menu-main--dark");
           } else {
@@ -52,12 +53,10 @@
     let menuElement = $(".menu-main");
 
     $window.on("scroll resize", isOnView);
-
     $window.on("scroll", fixMenu);
 
     $('.slick-squares__link').on('click', function () {
       let videoUrl = $(this).data('video-url');
-
       $('#modal-webnarios iframe').attr('src', videoUrl);
     });
 
@@ -97,9 +96,9 @@
       if (element.lenght > 0) {
         //let lightbox = new FsLightbox();
         fsLightboxInstances[galeryName].open(0);
-        fsLightboxInstances[galeryName].props.onOpen = () => console.log('Lightbox open!');
+       /*  fsLightboxInstances[galeryName].props.onOpen = () => console.log('Lightbox open!');
         fsLightboxInstances[galeryName].props.onClose = () => console.log('Lightbox close!');
-        fsLightboxInstances[galeryName].props.onSlideChange = (fsLightbox) => console.log(fsLightbox);
+        fsLightboxInstances[galeryName].props.onSlideChange = (fsLightbox) => console.log(fsLightbox); */
         //fsLightboxInstances[galeryName].props.onShow = (fsLightbox) => console.log('event -> ', fsLightbox);
 
         //lightbox.props.onInit = () => console.log('Lightbox initialized!');
@@ -107,37 +106,45 @@
     }
 
     galleryFullscreen($('.gallery-fullscreen'), 'lightbox-galeria');
-    //galleryFullscreen($('#grid-squares'), 'grid-lightbox-squares');
-    refreshFsLightbox();
+    galleryFullscreen($('#grid-squares'), 'grid-lightbox-squares');
 
     if (window.location.pathname != '/') {
       $('.menu-main').addClass('shrink menu-main--dark');
     }
 
     $('.slick-squares__link').on('click', function() {
-      console.log('click event -> ', $(this).data('audio'));
+      $('.fslightbox-slide-btn-container-previous').on('click', function() {
+        changeAudio();
 
-      let urlAudio = $(this).data('audio');
-      //$('.player-content audio').stop();
-      //$('.player-content audio source').attr('src', $(this).data('audio'));
+      });
+
+      $('.fslightbox-slide-btn-container-next').on('click', function() {
+        changeAudio();
+      });
+
+      playerElement.src = $(this).data('audio');
 
       setTimeout(function() {
-        document.getElementById('player-audio').src = urlAudio;
         $('.player-content').removeClass('hidden');
-      }, 1000);
+      }, 500);
     });
 
-    $('.fslightbox-slide-btn-container-previous').on('click', function() {
-      updateGaleryAudio();
-    });
+    function changeAudio() {
+      let gallery = $('.fslightbox-source-outer');
 
-    $('.fslightbox-slide-btn-container-next').on('click', function() {
-      updateGaleryAudio();
-    });
+      setTimeout(function() {
+        gallery.each(function(index){
+          if(gallery[index].style.cssText.indexOf('transform: translateX(0px);') > -1){
+            for (const key in dataGallery) {
+              if(dataGallery[key].url == gallery[index].querySelector('img').src){
+                playerElement.src = dataGallery[key].audio;
+              }
+            }
+          }
+        });
+      }, 500);
 
-    function updateGaleryAudio() {
-      console.log('update audio');
     }
-
   });
 })(jQuery);
+

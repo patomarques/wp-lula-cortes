@@ -18,7 +18,7 @@ $post_slug = $post->post_name;
     <div class="row">
       <div class="col-12">
 
-        <nav id="navMenuFixed" class="navMenuFixed">
+        <nav id="navMenuFixed" class="navMenuFixed hidden">
           <ul class="list-nav list-inline">
               <li class="list-nav__item list-inline-item">
                 <a href="#section-project" class="list-nav__link">
@@ -70,7 +70,7 @@ $post_slug = $post->post_name;
   </div>
   <div class="row">
     <div class="col-12">
-      <p>A curadoria dessa exposição virtual pretende apresentar ao público parte da série de pinturas intitulada Atípicos, de autoria de Lula Cortês, que está contida em acervo particulares – uma rede de amigos, sustentada por amores, paixões e muita amizade – que foi acionada por meio da realização de uma investigação que derivou em uma série de atividades, ações e sobretudo uma pesquisa a acerca da produção plástica do artista multidisciplinar Lula Cortês. [...]
+      <p>Além do mapeamento das obras, a pesquisa trouxe à tona uma série de reflexões sobre a relação de Lula Côrtes com a imagem e as artes visuais. Esse mergulhos geraram quatro ensaios críticos. Joana D'arc  abres essa série com o texto "Curadoria Atípicos e seus desvios cromáticos". Em seguida, Karuna Sindhu apresenta "Lula Côrtes, pintando com as palavras". Já Felipe Aretakis trás uma análise "Lula Côrtes, um artista atravessador de poiesis". Mariana Ratts fecha essa série de mergulhos com "Lula Côrtes e suas exposições.
       </p>
       <a class="btn btn-dark" href="<?= get_site_url() . '/atipicos/mergulhos' ?>">
         Ver mais
