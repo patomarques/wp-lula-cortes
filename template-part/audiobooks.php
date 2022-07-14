@@ -2,7 +2,7 @@
   $argsAudioBooks = array('post_type' => 'audiobooks', 'orderby' => 'Ordem', 'order' => 'ASC', 'posts_per_page' => -1);
   $queryAudioBooks = new WP_Query($argsAudioBooks);
 ?>
-<section id="section-zines" class="section-nav container section-content">
+<section id="section-audiobooks" class="section-nav container section-content">
   <div class="row mt-5 mb-3">
     <div class="col-12">
       <h3 class="subtitle-section">Audiobooks</h3>

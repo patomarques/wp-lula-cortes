@@ -399,8 +399,44 @@ p {
   &__link {}
 }
 
+.player-content {
+  width: 100vw;
+  height: 42px;
+  background-color: #000;
+  bottom: 0;
+  position: absolute;
+  z-index: 99999999;
+  opacity: .7;
+  @extend .trans;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  audio {
+    width: 100%;
+  }
+}
+
 /*MVP HOME TEMPORARY */
 .home {
+
+  .square {
+    .content {
+      filter: grayscale(100%);
+    }
+  }
+
+  section {
+    &:hover{
+      .square {
+        .content {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+
   .btn {
     display: none !important;
   }

@@ -45,7 +45,7 @@ $queryMusicas = new WP_Query($args);
               ?>
             </p>
 
-            <a href="/" class="btn btn-dark btn-custom mt-3" type="button">
+            <a href="<?= get_permalink() ?>" class="btn btn-dark btn-custom mt-3" type="button">
               <?= 'Continue lendo e ouça...' ?>
             </a>
 					</div>

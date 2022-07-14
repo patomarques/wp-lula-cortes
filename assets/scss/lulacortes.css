@@ -2,7 +2,7 @@
   background-color: #000000;
 }
 
-.trans, .title-section, a, .list-nav--item, .menu-main, .slick-prev,
+.trans, .title-section, a, .list-nav--item, .player-content, .menu-main, .slick-prev,
 .slick-next {
   transition: all 0.5s ease;
 }
@@ -397,7 +397,33 @@ p {
   min-height: 50px;
 }
 
+.player-content {
+  width: 100vw;
+  height: 42px;
+  background-color: #000;
+  bottom: 0;
+  position: absolute;
+  z-index: 99999999;
+  opacity: .7;
+}
+
+.player-content:hover {
+  opacity: 1;
+}
+
+.player-content audio {
+  width: 100%;
+}
+
 /*MVP HOME TEMPORARY */
+.home .square .content {
+  filter: grayscale(100%);
+}
+
+.home section:hover .square .content {
+  filter: grayscale(0%);
+}
+
 .home .btn {
   display: none !important;
 }

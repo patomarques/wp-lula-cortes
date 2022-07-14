@@ -17,7 +17,7 @@
       let cur_pos = $(this).scrollTop();
 
       sections.each(function () {
-        let top = $(this).offset().top - navHeight - (headerElementHeight * 2);
+        let top = $(this).offset().top - navHeight - headerElementHeight;
         let bottom = top + $(this).outerHeight();
 
         if (cur_pos >= top && cur_pos <= bottom) {
@@ -37,6 +37,8 @@
       $('html, body').animate({
         scrollTop: $(id).offset().top - navHeight - headerElementHeight - 40
       }, 500);
+
+      console.log('aqui scrollar');
 
       return false;
     });

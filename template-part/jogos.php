@@ -3,7 +3,7 @@
   $queryJogos = new WP_Query($argsJogos);
 ?>
 
-<section id="section-zines" class="section-nav container section-content mt-5 mb-5 pb-5">
+<section id="section-jogos" class="section-nav container section-content mt-5 mb-5 pb-5">
   <div class="row mt-5">
     <div class="col-12">
       <h3 class="subtitle-section">Jogo</h3>

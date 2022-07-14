@@ -5,30 +5,37 @@
 
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-<div class="container mb-5">
+<section id="section-livros" class="container section-nav mb-5">
 
   <div class="accordion accordion-flush" id="accordionFlushExample">
 
-    <?php while ($queryLivros->have_posts()) : $queryLivros->the_post(); ?>
+    <?php
+      $counter = 0;
+      while ($queryLivros->have_posts()) : $queryLivros->the_post(); ?>
 
-    <div class="accordion-item" data-ano-lancamento="<?= get_post_field('ano-lancamento') ?>">
-      <h2 class="accordion-header" id="flush-heading<?= get_post_field('ano-lancamento') ?>">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?= get_post_field('ano-lancamento') ?>" aria-expanded="false" aria-controls="flush-collapse<?= get_post_field('ano-lancamento') ?>">
-          <b><?= the_title() ?></b>
-        </button>
-      </h2>
-      <div id="flush-collapse<?= get_post_field('ano-lancamento') ?>" class="accordion-collapse collapse" aria-labelledby="flush-heading<?= get_post_field('ano-lancamento') ?>" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          <?= the_content() ?>
+        <div class="accordion-item" data-ano-lancamento="<?= get_post_field('ano-lancamento') ?>">
+          <h2 class="accordion-header" id="flush-heading<?= $counter ?>">
+            <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapse<?= $counter ?>"
+              aria-expanded="false" aria-controls="flush-collapse<?= $counter ?>">
+              <b><?= the_title() ?></b>
+            </button>
+          </h2>
+          <div id="flush-collapse<?= $counter ?>" class="accordion-collapse collapse"
+            aria-labelledby="flush-heading<?= $counter ?>"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <?= the_content() ?>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
     <?php
+      $counter++;
       endwhile;
       wp_reset_postdata();
     ?>
 
   </div>
 
-</div>
+</section>

@@ -3,7 +3,7 @@
   $queryPdfs = new WP_Query($argsPdfs);
 ?>
 
-<section id="section-zines" class="section-nav container section-content">
+<section id="section-pdfs" class="section-nav container section-content">
   <div class="row mt-5">
     <div class="col-12">
       <h3 class="subtitle-section">PDF's</h3>

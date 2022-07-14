@@ -10,6 +10,7 @@
 
     <?php
       $thumbs = get_the_post_thumbnail_url();
+      $thumbsBackground = get_the_post_thumbnail_url(get_the_ID(), 'article-thumbnail-image');
 
       if($thumbs == ''){
         $thumbs = get_site_url() . '/wp-content/uploads/2022/06/no-image.jpg';
@@ -27,7 +28,7 @@
         class="slick-squares__box-image slick-squares__link"
         data-fslightbox="grid-lightbox-squares"
         data-title="<?= get_the_title() ?>"
-        style="background-image: url(<?=  $thumbs ?>)">
+        style="background-image: url(<?=  $thumbsBackground ?>)">
         <div class="slick-squares__box-image__spacer"></div>
       </a>
     </div>

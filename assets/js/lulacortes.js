@@ -33,26 +33,23 @@
     }
 
     function fixMenu() {
-      //console.log('fix menu()');
-      //menu-main--dark
-      //console.log('menu effect ', sectionElement.scrollTop);
+      let nextSectionContent = document.getElementById("page-content");
+
+      if (nextSectionContent != null) {
+        let elementHeight = nextSectionContent.offsetHeight;
+
+        $(window).scroll(function () {
+          // console.log('scroll', elementHeight);
+          if ($(window).scrollTop() > elementHeight) {
+            menuElement.addClass("shrink menu-main--dark");
+          } else {
+            menuElement.removeClass("shrink menu-main--dark");
+          }
+        });
+      }
     }
 
     let menuElement = $(".menu-main");
-    let nextSectionContent = document.getElementById("page-content");
-
-    if (nextSectionContent != null) {
-      let elementHeight = nextSectionContent.offsetHeight;
-
-      $(window).scroll(function () {
-       // console.log('scroll', elementHeight);
-        if ($(document).scrollTop() > elementHeight) {
-          menuElement.addClass("shrink menu-main--dark");
-        } else {
-          menuElement.removeClass("shrink menu-main--dark");
-        }
-      });
-    }
 
     $window.on("scroll resize", isOnView);
 
@@ -97,17 +94,49 @@
     //navSectionScroll();
 
     function galleryFullscreen(element, galeryName) {
-      if(element.lenght > 0){
-        const lightbox = new FsLightbox();
+      if (element.lenght > 0) {
+        //let lightbox = new FsLightbox();
         fsLightboxInstances[galeryName].open(0);
+        fsLightboxInstances[galeryName].props.onOpen = () => console.log('Lightbox open!');
+        fsLightboxInstances[galeryName].props.onClose = () => console.log('Lightbox close!');
+        fsLightboxInstances[galeryName].props.onSlideChange = (fsLightbox) => console.log(fsLightbox);
+        //fsLightboxInstances[galeryName].props.onShow = (fsLightbox) => console.log('event -> ', fsLightbox);
+
+        //lightbox.props.onInit = () => console.log('Lightbox initialized!');
       }
     }
 
-    galleryFullscreen($('.gallery-fullscreen'), 'first-lightbox');
-    galleryFullscreen($('#grid-squares'), 'grid-lightbox-squares');
+    galleryFullscreen($('.gallery-fullscreen'), 'lightbox-galeria');
+    //galleryFullscreen($('#grid-squares'), 'grid-lightbox-squares');
+    refreshFsLightbox();
 
-    if(window.location.pathname != '/'){
+    if (window.location.pathname != '/') {
       $('.menu-main').addClass('shrink menu-main--dark');
+    }
+
+    $('.slick-squares__link').on('click', function() {
+      console.log('click event -> ', $(this).data('audio'));
+
+      let urlAudio = $(this).data('audio');
+      //$('.player-content audio').stop();
+      //$('.player-content audio source').attr('src', $(this).data('audio'));
+
+      setTimeout(function() {
+        document.getElementById('player-audio').src = urlAudio;
+        $('.player-content').removeClass('hidden');
+      }, 1000);
+    });
+
+    $('.fslightbox-slide-btn-container-previous').on('click', function() {
+      updateGaleryAudio();
+    });
+
+    $('.fslightbox-slide-btn-container-next').on('click', function() {
+      updateGaleryAudio();
+    });
+
+    function updateGaleryAudio() {
+      console.log('update audio');
     }
 
   });
