@@ -4777,6 +4777,7 @@ p {
 }
 .slick-squares__link {
   padding: 0;
+  overflow: hidden;
 }
 .slick-squares__box-image {
   float: left;
@@ -4784,6 +4785,7 @@ p {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 .slick-squares__box-image__spacer {
   width: 100%;

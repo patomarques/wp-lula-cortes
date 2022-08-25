@@ -86,7 +86,7 @@
       });
     }
 
-    $(".nav-link").on("click", function () {
+    $(".list-nav__link").on("click", function () {
       let toggle = $(".toggle")[0];
       toggle.click();
 

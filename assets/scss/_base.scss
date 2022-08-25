@@ -270,6 +270,7 @@ p {
 
   &__link {
     padding: 0;
+    overflow: hidden;
   }
 
   &__box-image {
@@ -278,19 +279,16 @@ p {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;    
+    overflow: hidden;
 
     &__spacer {
       width: 100%;
       height: 0;
       padding-bottom: 100%;
-      //background: orange;
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
-      // position: absolute;
-      // width: 100%;
-      // height: 100%;
-      // background-color: green;
+    }
+
+    &:hover{
+      //transform: scale(1.1);
     }
   }
 }

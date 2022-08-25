@@ -203,8 +203,8 @@ $queryTeam = new WP_Query($argsTeam);
 	</div>
 </section>
 
-<section class="container-full content-slick-squares mb-5" data-type="esbocos">
-	<div class="slick-squares">
+<section class="container-full content-slick-squares mt-5 mb-5" data-type="esbocos">
+	<div class="slick-squares mt-5 mb-5">
 		<div class="slick-squares__item">
 			<div class="slick-squares__item__text">
 				<a href="/" class="slick-squares__link">
